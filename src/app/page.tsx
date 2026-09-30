@@ -1,0 +1,305 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { courses, testimonials, whyChooseUs, generalFaqs, site } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "Learn Quran Online with Certified Male & Female Tutors",
+  description:
+    "Join Quran Tutoring for personalized 1-on-1 online Quran classes, Noorani Qaida, Tajweed, Hifz, Arabic, and Islamic Studies for kids, adults, and beginners. Free trial class available, 24/7.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Learn Quran Online with Certified Male & Female Tutors",
+    description:
+      "Personalized 1-on-1 online Quran classes for kids, adults, and beginners worldwide. Free trial class, flexible scheduling, certified tutors.",
+    url: site.url,
+  },
+};
+
+export default function Home() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: generalFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-ink pb-24 pt-16 text-white sm:pt-24">
+        <div className="blob -left-32 -top-32 h-96 w-96 bg-brand" />
+        <div className="blob -right-24 top-40 h-80 w-80 bg-brand-light" />
+
+        <div className="container-page relative grid items-center gap-16 lg:grid-cols-2">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-light">
+              ✨ Free Trial Class for New Students
+            </span>
+            <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-[3.4rem]">
+              Empowering Souls Through{" "}
+              <span className="gradient-text">Quranic Knowledge</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-gray-300">
+              We warmly welcome students of all ages to join our online Quran
+              classes with qualified male and female tutors, flexible timings,
+              a free trial, and expert guidance every step of the way.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="rounded-full bg-brand px-8 py-3.5 font-semibold text-white shadow-lg shadow-brand/30 transition hover:-translate-y-0.5 hover:bg-brand-light"
+              >
+                Enroll Now
+              </Link>
+              <Link
+                href="/courses"
+                className="rounded-full border border-white/20 px-8 py-3.5 font-semibold text-white transition hover:bg-white/10"
+              >
+                Explore Courses
+              </Link>
+            </div>
+
+            <div className="mt-12 flex flex-wrap gap-8 border-t border-white/10 pt-8">
+              <div>
+                <p className="text-2xl font-extrabold text-brand-light">15+</p>
+                <p className="text-sm text-gray-400">Years Teaching</p>
+              </div>
+              <div>
+                <p className="text-2xl font-extrabold text-brand-light">6</p>
+                <p className="text-sm text-gray-400">Courses Offered</p>
+              </div>
+              <div>
+                <p className="text-2xl font-extrabold text-brand-light">24/7</p>
+                <p className="text-sm text-gray-400">Availability</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div className="float relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-black/40 ring-1 ring-white/10">
+              <Image
+                src="/images/hero-online-class.jpg"
+                alt="Student attending an online Quran class"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 hidden w-60 rounded-2xl border border-white/10 bg-ink/90 p-4 shadow-2xl shadow-black/50 backdrop-blur-md sm:block">
+              <p className="text-sm font-semibold text-white">Live 1-on-1 Classes</p>
+              <p className="mt-1 text-xs leading-relaxed text-gray-300">
+                With certified male &amp; female tutors, worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="section">
+        <div className="container-page grid items-center gap-14 lg:grid-cols-2">
+          <div className="relative order-2 aspect-[4/3] w-full overflow-hidden rounded-[1.75rem] shadow-xl lg:order-1">
+            <Image
+              src="/images/hero-secondary.jpg"
+              alt="Child reading the Quran"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="order-1 lg:order-2">
+            <span className="text-sm font-bold uppercase tracking-widest text-brand">
+              Learn Quran Online
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-ink sm:text-4xl">
+              Expert Tutors For Kids, Adults &amp; Beginners
+            </h2>
+            <p className="mt-5 leading-relaxed text-gray-600">
+              At <strong>Quran Tutoring</strong>, we offer personalized online
+              Quran classes for all age groups, from young children to busy
+              adults and complete beginners. Our qualified tutors use
+              interactive teaching methods, combining fun activities with
+              structured Quranic lessons to keep young learners engaged and
+              motivated.
+            </p>
+            <p className="mt-4 leading-relaxed text-gray-600">
+              If you&rsquo;re just starting, our tutors will guide you step by
+              step through the basics of Quran reading, including Arabic
+              letters, Tajweed rules, pronunciation, and recitation
+              techniques, all at your own pace.
+            </p>
+            <p className="mt-4 leading-relaxed text-gray-600">
+              Whether you&rsquo;re searching for an online Quran academy for
+              your child, a Tajweed teacher to refine your recitation, or a
+              structured Hifz program to become a Hafiz, Quran Tutoring
+              connects you with a dedicated tutor and a flexible schedule
+              built around your life, not the other way around.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses */}
+      <section className="section bg-cream">
+        <div className="container-page">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-brand">
+              Our Programs
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-ink sm:text-4xl">
+              What You Can Learn
+            </h2>
+            <p className="mt-3 text-gray-600">
+              Explore our full range of Quran and Islamic learning courses,
+              guided by certified, experienced tutors.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            {courses.map((course) => (
+              <div
+                key={course.slug}
+                className="card-lift flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5"
+              >
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-lg font-bold text-ink">{course.shortTitle}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
+                    {course.summary}
+                  </p>
+                  <Link
+                    href={`/courses/${course.slug}`}
+                    className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand transition hover:gap-2.5 hover:text-brand-dark"
+                  >
+                    Read More <span aria-hidden>→</span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why choose us */}
+      <section className="section bg-ink text-white">
+        <div className="container-page">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-brand-light">
+              Why Choose Us
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">
+              The First Choice for Authentic Quran Education
+            </h2>
+            <p className="mt-4 text-gray-300">
+              We are the first choice for individuals and families seeking
+              authentic, flexible, and high-quality Quran education online ,
+              and here&rsquo;s why:
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {whyChooseUs.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <h3 className="font-bold text-brand-light">{item.title}</h3>
+                <p className="mt-1.5 text-sm text-gray-300">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="section">
+        <div className="container-page">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-brand">
+              Testimonials
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-ink sm:text-4xl">
+              What Our Students Say
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-7 md:grid-cols-3">
+            {testimonials.map((t) => (
+              <div
+                key={t.name}
+                className="card-lift rounded-3xl border border-black/5 bg-white p-8 shadow-sm"
+              >
+                <div className="mb-3 text-brand">★★★★★</div>
+                <h3 className="font-bold text-ink">{t.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <p className="mt-4 text-sm font-semibold text-ink">
+                  {t.name} <span className="font-normal text-gray-500">– {t.location}</span>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section bg-cream">
+        <div className="container-page mx-auto max-w-3xl">
+          <div className="text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-brand">
+              Frequently Asked Questions
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-ink sm:text-4xl">
+              Common Questions About Learning Quran Online
+            </h2>
+          </div>
+          <div className="mt-10 divide-y divide-black/5 rounded-3xl bg-white shadow-sm ring-1 ring-black/5">
+            {generalFaqs.map((faq) => (
+              <details key={faq.q} className="group p-6">
+                <summary className="cursor-pointer list-none font-semibold text-ink marker:content-none">
+                  <span className="flex items-center justify-between gap-4">
+                    {faq.q}
+                    <span className="text-brand transition group-open:rotate-45">+</span>
+                  </span>
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section relative overflow-hidden bg-gradient-to-br from-brand to-brand-dark text-white">
+        <div className="blob -right-20 -top-20 h-72 w-72 bg-white/30" />
+        <div className="container-page relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
+          <div>
+            <h2 className="text-2xl font-bold sm:text-3xl">
+              Ready to begin your Quran journey?
+            </h2>
+            <p className="mt-2 text-white/90">
+              Start with a free trial class, no commitment required.
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
+          >
+            Start Your Free Trial Today!
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
