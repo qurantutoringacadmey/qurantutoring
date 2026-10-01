@@ -74,7 +74,7 @@ export default function CoursesPage() {
                       Book Now
                     </Link>
                     <a
-                      href="tel:+9231604283767"
+                      href={`tel:${site.whatsapp}`}
                       className="text-sm font-semibold text-ink transition hover:text-brand"
                     >
                       Call Now

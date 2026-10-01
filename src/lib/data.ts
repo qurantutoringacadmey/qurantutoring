@@ -5,8 +5,8 @@ export const site = {
   description:
     "Learn Quran online with certified male and female tutors. One-on-one classes in Quran reading, Tajweed, Hifz (memorization), Arabic, and Islamic Studies for kids, adults, and beginners worldwide.",
   url: "https://qurantutoring.net",
-  phone: "+92 316 4283767",
-  phoneAlt: "(92) 316 4283767",
+  phone: "+92 311 4893800",
+  phoneAlt: "(92) 311 4893800",
   whatsapp: "923114893800",
   whatsappDisplay: "+92 311 4893800",
   email: "qurantutoring.net@gmail.com",
