@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { buildContactEmailHtml } from "@/lib/email-template";
+import { site } from "@/lib/data";
 
 export async function POST(request: Request) {
   const resendApiKey = process.env.RESEND_API_KEY;
@@ -56,15 +58,14 @@ export async function POST(request: Request) {
       to: toEmail,
       replyTo: email,
       subject: `New enquiry from ${name} – Quran Tutoring`,
-      html: `
-        <h2>New enquiry from the website contact form</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Phone:</strong> ${escapeHtml(phone || "Not provided")}</p>
-        <p><strong>Course of Interest:</strong> ${escapeHtml(course || "Not specified")}</p>
-        <p><strong>Message:</strong></p>
-        <p>${escapeHtml(message || "(No message provided)").replace(/\n/g, "<br/>")}</p>
-      `,
+      html: buildContactEmailHtml({
+        name: escapeHtml(name),
+        email: escapeHtml(email),
+        phone: escapeHtml(phone || "Not provided"),
+        course: escapeHtml(course || "Not specified"),
+        message: escapeHtml(message || "(No message provided)").replace(/\n/g, "<br/>"),
+        siteUrl: site.url,
+      }),
     });
 
     if (error) {
