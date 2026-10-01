@@ -92,7 +92,7 @@ export default function Home() {
         <p
           dir="rtl"
           aria-hidden="true"
-          className="float pointer-events-none absolute -top-6 left-1/2 w-full -translate-x-1/2 text-center text-[13vw] font-bold leading-none text-white/[0.04] sm:text-[8vw]"
+          className="float pointer-events-none absolute top-4 left-1/2 w-full -translate-x-1/2 whitespace-nowrap text-center font-arabic text-[11vw] font-bold leading-none text-brand-light/[0.09] sm:top-6 sm:text-[6vw]"
         >
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
         </p>
@@ -146,17 +146,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:ml-auto lg:mr-0">
             <div className="float relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-black/40 ring-1 ring-white/10">
               <Image
                 src="/images/hero-online-class.jpg"
                 alt="Student attending an online Quran class"
                 fill
                 priority
+                sizes="(max-width: 640px) 320px, 384px"
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 hidden w-60 rounded-2xl border border-white/10 bg-ink/90 p-4 shadow-2xl shadow-black/50 backdrop-blur-md sm:block">
+            <div className="absolute -bottom-6 -left-6 hidden w-56 rounded-2xl border border-white/10 bg-ink/90 p-4 shadow-2xl shadow-black/50 backdrop-blur-md sm:block">
               <p className="text-sm font-semibold text-white">Live 1-on-1 Classes</p>
               <p className="mt-1 text-xs leading-relaxed text-gray-300">
                 With certified male &amp; female tutors, worldwide.
