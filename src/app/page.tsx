@@ -6,6 +6,7 @@ import { blogPosts } from "@/lib/blog";
 import { SparkleIcon, StarIcon, ShieldIcon, ClockIcon, GlobeIcon, BookIcon } from "@/components/icons";
 import Reveal from "@/components/Reveal";
 import Counter from "@/components/Counter";
+import WaveDivider from "@/components/WaveDivider";
 
 const trustPoints = [
   {
@@ -84,10 +85,17 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* Hero */}
-      <section className="relative overflow-hidden bg-ink pb-24 pt-16 text-white sm:pt-24">
+      <section className="relative overflow-hidden bg-ink pb-28 pt-16 text-white sm:pt-24">
         <div className="mesh-bg absolute inset-0" />
         <div className="blob -left-32 -top-32 h-96 w-96 bg-brand" />
         <div className="blob -right-24 top-40 h-80 w-80 bg-brand-light" />
+        <p
+          dir="rtl"
+          aria-hidden="true"
+          className="float pointer-events-none absolute -top-6 left-1/2 w-full -translate-x-1/2 text-center text-[13vw] font-bold leading-none text-white/[0.04] sm:text-[8vw]"
+        >
+          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        </p>
 
         <div className="container-page relative grid items-center gap-16 lg:grid-cols-2">
           <div>
@@ -156,6 +164,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <WaveDivider fill="#ffffff" />
       </section>
 
       {/* Trust bar marquee */}
@@ -304,7 +313,7 @@ export default function Home() {
       </section>
 
       {/* Why choose us */}
-      <section className="section bg-ink text-white">
+      <section className="section relative bg-ink text-white">
         <div className="container-page">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-sm font-bold uppercase tracking-widest text-brand-light">
@@ -330,6 +339,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <WaveDivider fill="#fffdfb" />
       </section>
 
       {/* Testimonials */}
@@ -465,6 +475,7 @@ export default function Home() {
             Start Your Free Trial Today!
           </Link>
         </div>
+        <WaveDivider fill="#0f1115" />
       </section>
     </>
   );
