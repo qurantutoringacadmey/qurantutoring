@@ -2,7 +2,31 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { courses, testimonials, whyChooseUs, generalFaqs, site } from "@/lib/data";
+import { blogPosts } from "@/lib/blog";
 import { SparkleIcon, StarIcon } from "@/components/icons";
+
+const howItWorks = [
+  {
+    step: "01",
+    title: "Book a Free Trial",
+    desc: "Reach out via WhatsApp, phone, or our contact form to schedule your free trial class.",
+  },
+  {
+    step: "02",
+    title: "Meet Your Tutor",
+    desc: "Get matched with a certified male or female tutor based on your age, level, and goals.",
+  },
+  {
+    step: "03",
+    title: "Start Learning Live",
+    desc: "Join one-on-one live video classes on Zoom or Skype, at a time that fits your schedule.",
+  },
+  {
+    step: "04",
+    title: "Track Your Progress",
+    desc: "Receive regular progress updates and move through your course at a comfortable pace.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Learn Quran Online with Certified Male & Female Tutors",
@@ -147,8 +171,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Courses */}
+      {/* How It Works */}
       <section className="section bg-cream">
+        <div className="container-page">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-brand">
+              How It Works
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-ink sm:text-4xl">
+              Start Learning in Four Simple Steps
+            </h2>
+            <p className="mt-3 text-gray-600">
+              Getting started with Quran Tutoring is quick, flexible, and
+              built around your schedule.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+            {howItWorks.map((item) => (
+              <div
+                key={item.step}
+                className="card-lift relative rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5"
+              >
+                <span className="text-4xl font-extrabold text-brand/15">
+                  {item.step}
+                </span>
+                <h3 className="mt-2 text-lg font-bold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Courses */}
+      <section className="section">
         <div className="container-page">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-sm font-bold uppercase tracking-widest text-brand">
@@ -281,6 +340,59 @@ export default function Home() {
                 <p className="mt-3 text-sm leading-relaxed text-gray-600">{faq.a}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog preview */}
+      <section className="section">
+        <div className="container-page">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-brand">
+              From Our Blog
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-ink sm:text-4xl">
+              Guides on Quran Learning &amp; Tajweed
+            </h2>
+            <p className="mt-3 text-gray-600">
+              Practical articles to help you and your family get the most out
+              of online Quran education.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-7 sm:grid-cols-2">
+            {blogPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="card-lift flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5"
+              >
+                <div className="relative h-48 w-full">
+                  <Image src={post.image} alt={post.title} fill className="object-cover" />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-brand">
+                    {post.readTime}
+                  </span>
+                  <h3 className="mt-2 text-lg font-bold text-ink">{post.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
+                    {post.excerpt}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand">
+                    Read Article <span aria-hidden>→</span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/blog"
+              className="inline-block rounded-full border border-black/10 px-7 py-3 font-semibold text-ink transition hover:bg-black/5"
+            >
+              View All Articles
+            </Link>
           </div>
         </div>
       </section>

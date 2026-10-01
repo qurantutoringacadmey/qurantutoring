@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site, courses } from "@/lib/data";
+import { blogPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/courses", "/pricing", "/about", "/contact", "/blog"].map(
@@ -18,5 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...courseRoutes];
+  const blogRoutes = blogPosts.map((p) => ({
+    url: `${site.url}/blog/${p.slug}`,
+    lastModified: new Date(p.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...courseRoutes, ...blogRoutes];
 }
