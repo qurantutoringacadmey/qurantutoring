@@ -92,7 +92,7 @@ export default function Home() {
         <p
           dir="rtl"
           aria-hidden="true"
-          className="float pointer-events-none absolute top-3 left-1/2 w-full -translate-x-1/2 whitespace-nowrap text-center font-arabic text-[5.5vw] font-bold leading-none text-brand-light/[0.11] sm:top-5 sm:text-[2.3vw]"
+          className="float pointer-events-none absolute top-10 left-1/2 w-full -translate-x-1/2 whitespace-nowrap text-center font-arabic text-[5.5vw] font-bold leading-none text-brand-light/[0.11] sm:top-14 sm:text-[2.3vw]"
         >
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
         </p>
