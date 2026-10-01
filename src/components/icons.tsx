@@ -57,3 +57,27 @@ export function StarIcon({ className = "h-4 w-4" }: { className?: string }) {
     </svg>
   );
 }
+
+export function ShieldIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm-1.2 13.8-3.3-3.3 1.4-1.4 1.9 1.9 4.9-4.9 1.4 1.4-6.3 6.3Z" />
+    </svg>
+  );
+}
+
+export function ClockIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 10.41 4 2.3-.75 1.3L11 13V6h1.5v6.41Z" />
+    </svg>
+  );
+}
+
+export function GlobeIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 6H16.3a15.6 15.6 0 0 0-1.46-4.02A8.03 8.03 0 0 1 18.93 8ZM12 4.04c.83 1.1 1.5 2.5 1.93 3.96h-3.86c.43-1.46 1.1-2.86 1.93-3.96ZM4.26 14a8.1 8.1 0 0 1 0-4h3.02a16.6 16.6 0 0 0 0 4H4.26Zm.81 2h2.63a15.6 15.6 0 0 0 1.46 4.02A8.03 8.03 0 0 1 5.07 16Zm2.63-8H5.07a8.03 8.03 0 0 1 4.09-4.02A15.6 15.6 0 0 0 7.7 8ZM12 19.96c-.83-1.1-1.5-2.5-1.93-3.96h3.86c-.43 1.46-1.1 2.86-1.93 3.96ZM10.02 14a14.3 14.3 0 0 1 0-4h3.96a14.3 14.3 0 0 1 0 4h-3.96ZM15.7 20.02A15.6 15.6 0 0 0 17.16 16h2.63a8.03 8.03 0 0 1-4.09 4.02ZM19.74 14h-3.02a16.6 16.6 0 0 0 0-4h3.02a8.1 8.1 0 0 1 0 4Z" />
+    </svg>
+  );
+}

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { pricingPlans, paymentMethods, site } from "@/lib/data";
-import { CheckIcon } from "@/components/icons";
+import { CheckIcon, ShieldIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Quran Class Pricing – Affordable Online Quran Course Plans",
@@ -151,6 +151,25 @@ export default function PricingPage() {
             </a>{" "}
             so we can confirm your payment promptly.
           </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container-page mx-auto max-w-3xl">
+          <div className="flex flex-col items-center gap-6 rounded-3xl border border-black/5 bg-white p-10 text-center shadow-sm sm:flex-row sm:text-left">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-orange-50 text-brand">
+              <ShieldIcon className="h-8 w-8" />
+            </span>
+            <div>
+              <h2 className="text-xl font-bold text-ink">Our No-Risk Guarantee</h2>
+              <p className="mt-2 text-gray-600">
+                Every plan starts with a free trial class, no credit card, no
+                commitment. If you&rsquo;re not happy with your tutor, we&rsquo;ll
+                match you with another one at no extra cost. You only pay once
+                you&rsquo;re confident Quran Tutoring is the right fit for your family.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

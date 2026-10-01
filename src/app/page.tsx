@@ -3,7 +3,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { courses, testimonials, whyChooseUs, generalFaqs, site } from "@/lib/data";
 import { blogPosts } from "@/lib/blog";
-import { SparkleIcon, StarIcon } from "@/components/icons";
+import { SparkleIcon, StarIcon, ShieldIcon, ClockIcon, GlobeIcon, BookIcon } from "@/components/icons";
+
+const trustPoints = [
+  {
+    icon: ShieldIcon,
+    title: "Ijazah-Certified Tutors",
+    desc: "Verified qualifications in Tajweed, Hifz & Islamic Studies",
+  },
+  {
+    icon: ClockIcon,
+    title: "24/7 Scheduling",
+    desc: "Classes that fit any time zone, any day of the week",
+  },
+  {
+    icon: GlobeIcon,
+    title: "Students Worldwide",
+    desc: "Teaching families across the USA, UK, Canada & beyond",
+  },
+  {
+    icon: BookIcon,
+    title: "15+ Years Teaching",
+    desc: "Structured curriculum built on real classroom experience",
+  },
+];
 
 const howItWorks = [
   {
@@ -125,6 +148,23 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <section className="border-b border-black/5 bg-white py-10">
+        <div className="container-page grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {trustPoints.map((point) => (
+            <div key={point.title} className="flex items-start gap-3">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-brand">
+                <point.icon className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="font-bold text-ink">{point.title}</p>
+                <p className="text-sm text-gray-500">{point.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
