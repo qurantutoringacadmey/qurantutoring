@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/data";
+import Reveal from "@/components/Reveal";
+import Counter from "@/components/Counter";
+import WaveDivider from "@/components/WaveDivider";
 
 export const metadata: Metadata = {
   title: "About Us – Meet Our Founder & Quran Teaching Philosophy",
@@ -20,6 +23,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-ink py-24 text-center text-white">
+        <div className="mesh-bg absolute inset-0" />
         <div className="blob -left-24 top-10 h-72 w-72 bg-brand" />
         <div className="container-page relative">
           <span className="text-sm font-bold uppercase tracking-widest text-brand-light">
@@ -31,10 +35,11 @@ export default function AboutPage() {
             dedicated teaching experience.
           </p>
         </div>
+        <WaveDivider fill="#fffdfb" />
       </section>
 
       <section className="section">
-        <div className="container-page mx-auto max-w-3xl text-center">
+        <Reveal className="container-page mx-auto max-w-3xl text-center">
           <span className="text-sm font-bold uppercase tracking-widest text-brand">
             Meet the Founder
           </span>
@@ -63,11 +68,15 @@ export default function AboutPage() {
 
           <div className="mt-10 flex justify-center gap-10 border-t border-black/5 pt-8">
             <div>
-              <p className="text-3xl font-extrabold text-brand">15+</p>
+              <p className="text-3xl font-extrabold text-brand">
+                <Counter to={15} suffix="+" />
+              </p>
               <p className="text-sm text-gray-500">Years of Experience</p>
             </div>
             <div>
-              <p className="text-3xl font-extrabold text-brand">6</p>
+              <p className="text-3xl font-extrabold text-brand">
+                <Counter to={6} />
+              </p>
               <p className="text-sm text-gray-500">Courses Offered</p>
             </div>
             <div>
@@ -75,7 +84,7 @@ export default function AboutPage() {
               <p className="text-sm text-gray-500">Availability</p>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="section relative overflow-hidden bg-ink text-white">
@@ -86,23 +95,28 @@ export default function AboutPage() {
           className="object-cover opacity-15"
         />
         <div className="container-page relative grid gap-7 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-            <h3 className="text-xl font-bold text-brand-light">Our Mission</h3>
-            <p className="mt-3 text-gray-300">
-              To provide quality Quran education online with proper Tajweed,
-              inspiring students to understand, recite, and live by the
-              teachings of the Quran.
-            </p>
-          </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-            <h3 className="text-xl font-bold text-brand-light">Our Vision</h3>
-            <p className="mt-3 text-gray-300">
-              To become a trusted global Quran tutoring platform where
-              students of all ages can learn the Quran easily, respectfully,
-              and meaningfully, from the comfort of their homes.
-            </p>
-          </div>
+          <Reveal>
+            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <h3 className="text-xl font-bold text-brand-light">Our Mission</h3>
+              <p className="mt-3 text-gray-300">
+                To provide quality Quran education online with proper Tajweed,
+                inspiring students to understand, recite, and live by the
+                teachings of the Quran.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <h3 className="text-xl font-bold text-brand-light">Our Vision</h3>
+              <p className="mt-3 text-gray-300">
+                To become a trusted global Quran tutoring platform where
+                students of all ages can learn the Quran easily, respectfully,
+                and meaningfully, from the comfort of their homes.
+              </p>
+            </div>
+          </Reveal>
         </div>
+        <WaveDivider fill="#e8730a" />
       </section>
 
       <section className="section relative overflow-hidden bg-gradient-to-br from-brand to-brand-dark text-white">
@@ -118,6 +132,7 @@ export default function AboutPage() {
             Start Your Free Trial
           </Link>
         </div>
+        <WaveDivider fill="#0f1115" />
       </section>
     </>
   );

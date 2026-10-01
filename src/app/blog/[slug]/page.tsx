@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/blog";
 import { site } from "@/lib/data";
+import WaveDivider from "@/components/WaveDivider";
+import Reveal from "@/components/Reveal";
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -96,6 +98,7 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
           </div>
           <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">{post.title}</h1>
         </div>
+        <WaveDivider fill="#fdf6ee" />
       </section>
 
       <section className="section bg-cream">

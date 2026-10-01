@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/data";
 import { blogPosts } from "@/lib/blog";
+import Reveal from "@/components/Reveal";
+import WaveDivider from "@/components/WaveDivider";
 
 export const metadata: Metadata = {
   title: "Blog – Quran, Tajweed & Islamic Knowledge Articles",
@@ -21,6 +23,7 @@ export default function BlogPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-ink py-24 text-center text-white">
+        <div className="mesh-bg absolute inset-0" />
         <div className="blob left-1/2 top-10 h-80 w-80 -translate-x-1/2 bg-brand" />
         <div className="container-page relative">
           <span className="text-sm font-bold uppercase tracking-widest text-brand-light">
@@ -34,40 +37,42 @@ export default function BlogPage() {
             right online Quran tutor for your family.
           </p>
         </div>
+        <WaveDivider fill="#fdf6ee" />
       </section>
 
       <section className="section bg-cream">
         <div className="container-page grid gap-7 sm:grid-cols-2">
-          {blogPosts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="card-lift flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5"
-            >
-              <div className="relative h-56 w-full">
-                <Image src={post.image} alt={post.title} fill className="object-cover" />
-              </div>
-              <div className="flex flex-1 flex-col p-7">
-                <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-wide text-brand">
-                  <time dateTime={post.date}>
-                    {new Date(post.date).toLocaleDateString("en-US", {
-                      month: "long",
-                      day: "numeric",
-                      year: "numeric",
-                    })}
-                  </time>
-                  <span>·</span>
-                  <span>{post.readTime}</span>
+          {blogPosts.map((post, i) => (
+            <Reveal key={post.slug} delay={i * 100}>
+              <Link
+                href={`/blog/${post.slug}`}
+                className="card-lift flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5"
+              >
+                <div className="relative h-56 w-full">
+                  <Image src={post.image} alt={post.title} fill className="object-cover" />
                 </div>
-                <h2 className="mt-3 text-xl font-bold text-ink">{post.title}</h2>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
-                  {post.excerpt}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand">
-                  Read Article <span aria-hidden>→</span>
-                </span>
-              </div>
-            </Link>
+                <div className="flex flex-1 flex-col p-7">
+                  <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-wide text-brand">
+                    <time dateTime={post.date}>
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      })}
+                    </time>
+                    <span>·</span>
+                    <span>{post.readTime}</span>
+                  </div>
+                  <h2 className="mt-3 text-xl font-bold text-ink">{post.title}</h2>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
+                    {post.excerpt}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand">
+                    Read Article <span aria-hidden>→</span>
+                  </span>
+                </div>
+              </Link>
+            </Reveal>
           ))}
         </div>
       </section>

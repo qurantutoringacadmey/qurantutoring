@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/data";
 import ContactForm from "@/components/ContactForm";
+import Reveal from "@/components/Reveal";
+import WaveDivider from "@/components/WaveDivider";
 
 export const metadata: Metadata = {
   title: "Contact Us – Book a Free Trial Quran Class",
@@ -19,6 +21,7 @@ export default function ContactPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-ink py-24 text-center text-white">
+        <div className="mesh-bg absolute inset-0" />
         <div className="blob -right-24 top-0 h-72 w-72 bg-brand" />
         <div className="container-page relative">
           <span className="text-sm font-bold uppercase tracking-widest text-brand-light">
@@ -31,25 +34,28 @@ export default function ContactPage() {
             question, we&rsquo;re here to help you every step of the way.
           </p>
         </div>
+        <WaveDivider fill="#fdf6ee" />
       </section>
 
       <section className="section bg-cream">
         <div className="container-page grid gap-8 lg:grid-cols-3">
-          <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 lg:col-span-2">
-            <h2 className="text-2xl font-bold text-ink">Send Us a Message</h2>
-            <p className="mt-2 text-sm text-gray-600">
-              Our support team is available 24/7 to assist students and parents
-              from around the world. We aim to respond as quickly as possible.
-            </p>
-            <div className="mt-6">
-              <ContactForm />
+          <Reveal className="lg:col-span-2">
+            <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+              <h2 className="text-2xl font-bold text-ink">Send Us a Message</h2>
+              <p className="mt-2 text-sm text-gray-600">
+                Our support team is available 24/7 to assist students and parents
+                from around the world. We aim to respond as quickly as possible.
+              </p>
+              <div className="mt-6">
+                <ContactForm />
+              </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="space-y-5">
+          <Reveal delay={100} className="space-y-5">
             <div className="card-lift rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5">
               <h3 className="font-bold text-ink">Call Us</h3>
-              <a href={`tel:${site.whatsapp}`} className="mt-1 block text-brand hover:underline">
+              <a href={`tel:${site.phone.replace(/[^\d+]/g, "")}`} className="mt-1 block text-brand hover:underline">
                 {site.phone}
               </a>
             </div>
@@ -68,7 +74,7 @@ export default function ContactPage() {
                 Chat with us anytime, 24/7
               </a>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

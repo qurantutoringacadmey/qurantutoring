@@ -42,7 +42,7 @@ export default function Header() {
               href={`https://wa.me/${site.whatsapp}`}
               className="flex items-center gap-1.5 text-gray-300 transition hover:text-brand-light"
             >
-              <WhatsAppIcon className="h-3.5 w-3.5" /> {site.phone}
+              <WhatsAppIcon className="h-3.5 w-3.5" /> {site.whatsappDisplay}
             </a>
             <a
               href={`tel:${site.phoneAlt.replace(/[^\d+]/g, "")}`}

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { courses, site } from "@/lib/data";
 import { CheckIcon, BookIcon, StarIcon } from "@/components/icons";
+import Reveal from "@/components/Reveal";
+import WaveDivider from "@/components/WaveDivider";
 
 export function generateStaticParams() {
   return courses.map((c) => ({ slug: c.slug }));
@@ -105,11 +107,12 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
           <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">{course.title}</h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-200">{course.subtitle}</p>
         </div>
+        <WaveDivider fill="#fdf6ee" />
       </section>
 
       <section className="section bg-cream">
         <div className="container-page grid gap-16 lg:grid-cols-3">
-          <div className="lg:col-span-2 space-y-12">
+          <Reveal className="lg:col-span-2 space-y-12">
             <div>
               <h2 className="text-2xl font-bold text-ink">Who is this course for?</h2>
               <ul className="mt-4 space-y-2">
@@ -169,9 +172,9 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <aside className="space-y-6">
+          <Reveal delay={100} className="space-y-6" as="aside">
             <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5">
               <h3 className="text-lg font-bold text-ink">
                 Ready to start your Quran journey?
@@ -201,7 +204,7 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
                   ))}
               </ul>
             </div>
-          </aside>
+          </Reveal>
         </div>
       </section>
     </>
