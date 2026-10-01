@@ -82,3 +82,45 @@ body {
   background: var(--brand);
   color: white;
 }
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mesh gradient background */
+.mesh-bg {
+  background-image:
+    radial-gradient(at 15% 20%, rgba(232, 115, 10, 0.18) 0px, transparent 50%),
+    radial-gradient(at 85% 10%, rgba(255, 152, 56, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 90%, rgba(232, 115, 10, 0.1) 0px, transparent 50%);
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(232, 115, 10, 0.45); }
+  70% { box-shadow: 0 0 0 14px rgba(232, 115, 10, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 115, 10, 0); }
+}
+.pulse-ring {
+  animation: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

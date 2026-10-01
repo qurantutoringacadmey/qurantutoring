@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MobileCtaBar from "@/components/MobileCtaBar";
 import { site } from "@/lib/data";
 
 const geistSans = Geist({
@@ -114,11 +115,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col pb-16 sm:pb-0">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <MobileCtaBar />
       </body>
     </html>
   );

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { courses, testimonials, whyChooseUs, generalFaqs, site } from "@/lib/data";
 import { blogPosts } from "@/lib/blog";
 import { SparkleIcon, StarIcon, ShieldIcon, ClockIcon, GlobeIcon, BookIcon } from "@/components/icons";
+import Reveal from "@/components/Reveal";
+import Counter from "@/components/Counter";
 
 const trustPoints = [
   {
@@ -83,6 +85,7 @@ export default function Home() {
       />
       {/* Hero */}
       <section className="relative overflow-hidden bg-ink pb-24 pt-16 text-white sm:pt-24">
+        <div className="mesh-bg absolute inset-0" />
         <div className="blob -left-32 -top-32 h-96 w-96 bg-brand" />
         <div className="blob -right-24 top-40 h-80 w-80 bg-brand-light" />
 
@@ -117,11 +120,15 @@ export default function Home() {
 
             <div className="mt-12 flex flex-wrap gap-8 border-t border-white/10 pt-8">
               <div>
-                <p className="text-2xl font-extrabold text-brand-light">15+</p>
+                <p className="text-2xl font-extrabold text-brand-light">
+                  <Counter to={15} suffix="+" />
+                </p>
                 <p className="text-sm text-gray-400">Years Teaching</p>
               </div>
               <div>
-                <p className="text-2xl font-extrabold text-brand-light">6</p>
+                <p className="text-2xl font-extrabold text-brand-light">
+                  <Counter to={6} />
+                </p>
                 <p className="text-sm text-gray-400">Courses Offered</p>
               </div>
               <div>
@@ -151,15 +158,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust bar */}
-      <section className="border-b border-black/5 bg-white py-10">
-        <div className="container-page grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {trustPoints.map((point) => (
-            <div key={point.title} className="flex items-start gap-3">
+      {/* Trust bar marquee */}
+      <section className="marquee-wrap overflow-hidden border-b border-black/5 bg-white py-7">
+        <div className="marquee-track">
+          {[...trustPoints, ...trustPoints].map((point, i) => (
+            <div
+              key={`${point.title}-${i}`}
+              className="flex shrink-0 items-center gap-3 px-8"
+            >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-brand">
                 <point.icon className="h-5 w-5" />
               </span>
-              <div>
+              <div className="whitespace-nowrap">
                 <p className="font-bold text-ink">{point.title}</p>
                 <p className="text-sm text-gray-500">{point.desc}</p>
               </div>
@@ -179,7 +189,7 @@ export default function Home() {
               className="object-cover"
             />
           </div>
-          <div className="order-1 lg:order-2">
+          <Reveal className="order-1 lg:order-2">
             <span className="text-sm font-bold uppercase tracking-widest text-brand">
               Learn Quran Online
             </span>
@@ -207,7 +217,7 @@ export default function Home() {
               connects you with a dedicated tutor and a flexible schedule
               built around your life, not the other way around.
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -228,19 +238,18 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
-            {howItWorks.map((item) => (
-              <div
-                key={item.step}
-                className="card-lift relative rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5"
-              >
-                <span className="text-4xl font-extrabold text-brand/15">
-                  {item.step}
-                </span>
-                <h3 className="mt-2 text-lg font-bold text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                  {item.desc}
-                </p>
-              </div>
+            {howItWorks.map((item, i) => (
+              <Reveal key={item.step} delay={i * 100}>
+                <div className="card-lift relative h-full rounded-3xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+                  <span className="text-4xl font-extrabold text-brand/15">
+                    {item.step}
+                  </span>
+                  <h3 className="mt-2 text-lg font-bold text-ink">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                    {item.desc}
+                  </p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -263,33 +272,32 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-            {courses.map((course) => (
-              <div
-                key={course.slug}
-                className="card-lift flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5"
-              >
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={course.image}
-                    alt={course.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            {courses.map((course, i) => (
+              <Reveal key={course.slug} delay={(i % 3) * 100}>
+                <div className="card-lift flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={course.image}
+                      alt={course.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="text-lg font-bold text-ink">{course.shortTitle}</h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
+                      {course.summary}
+                    </p>
+                    <Link
+                      href={`/courses/${course.slug}`}
+                      className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand transition hover:gap-2.5 hover:text-brand-dark"
+                    >
+                      Read More <span aria-hidden>→</span>
+                    </Link>
+                  </div>
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-lg font-bold text-ink">{course.shortTitle}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
-                    {course.summary}
-                  </p>
-                  <Link
-                    href={`/courses/${course.slug}`}
-                    className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand transition hover:gap-2.5 hover:text-brand-dark"
-                  >
-                    Read More <span aria-hidden>→</span>
-                  </Link>
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -312,11 +320,13 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {whyChooseUs.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <h3 className="font-bold text-brand-light">{item.title}</h3>
-                <p className="mt-1.5 text-sm text-gray-300">{item.desc}</p>
-              </div>
+            {whyChooseUs.map((item, i) => (
+              <Reveal key={item.title} delay={i * 100}>
+                <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-brand/40 hover:bg-white/10">
+                  <h3 className="font-bold text-brand-light">{item.title}</h3>
+                  <p className="mt-1.5 text-sm text-gray-300">{item.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -334,24 +344,23 @@ export default function Home() {
             </h2>
           </div>
           <div className="mt-12 grid gap-7 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="card-lift rounded-3xl border border-black/5 bg-white p-8 shadow-sm"
-              >
-                <div className="mb-3 flex gap-1 text-brand">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <StarIcon key={i} className="h-4 w-4" />
-                  ))}
+            {testimonials.map((t, i) => (
+              <Reveal key={t.name} delay={i * 100}>
+                <div className="card-lift h-full rounded-3xl border border-black/5 bg-white p-8 shadow-sm">
+                  <div className="mb-3 flex gap-1 text-brand">
+                    {Array.from({ length: 5 }).map((_, j) => (
+                      <StarIcon key={j} className="h-4 w-4" />
+                    ))}
+                  </div>
+                  <h3 className="font-bold text-ink">{t.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  <p className="mt-4 text-sm font-semibold text-ink">
+                    {t.name} <span className="font-normal text-gray-500">– {t.location}</span>
+                  </p>
                 </div>
-                <h3 className="font-bold text-ink">{t.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <p className="mt-4 text-sm font-semibold text-ink">
-                  {t.name} <span className="font-normal text-gray-500">– {t.location}</span>
-                </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
