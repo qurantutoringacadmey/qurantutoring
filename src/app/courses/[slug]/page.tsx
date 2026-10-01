@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { courses, site } from "@/lib/data";
+import { CheckIcon, BookIcon, StarIcon } from "@/components/icons";
 
 export function generateStaticParams() {
   return courses.map((c) => ({ slug: c.slug }));
@@ -114,7 +115,7 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
               <ul className="mt-4 space-y-2">
                 {course.who.map((item) => (
                   <li key={item} className="flex gap-3 text-gray-600">
-                    <span className="text-brand">✓</span>
+                    <CheckIcon className="mt-1 h-4 w-4 shrink-0 text-brand" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -126,7 +127,7 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
               <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                 {course.learn.map((item) => (
                   <li key={item} className="flex gap-3 text-gray-600">
-                    <span className="text-brand">📘</span>
+                    <BookIcon className="mt-1 h-4 w-4 shrink-0 text-brand" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -138,7 +139,7 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
               <ul className="mt-4 space-y-2">
                 {course.features.map((item) => (
                   <li key={item} className="flex gap-3 text-gray-600">
-                    <span className="text-brand">★</span>
+                    <StarIcon className="mt-1 h-4 w-4 shrink-0 text-brand" />
                     <span>{item}</span>
                   </li>
                 ))}

@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { pricingPlans, paymentMethods, site } from "@/lib/data";
+import { CheckIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Quran Class Pricing – Affordable Online Quran Course Plans",
   description:
-    "Affordable monthly Quran class plans for kids and adults, starting at $30/month, Starter, Medium, Standard, Advance, and Family plans, all including a free trial class.",
+    "Affordable monthly Quran class plans for kids and adults, starting at $35/month, plus a dedicated Hifz (memorization) plan, all including a free trial class.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Quran Class Pricing – Affordable Online Quran Course Plans",
@@ -41,59 +42,90 @@ export default function PricingPage() {
 
       <section className="section bg-cream">
         <div className="container-page grid gap-7 sm:grid-cols-2 lg:grid-cols-5">
-          {pricingPlans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`card-lift flex flex-col rounded-3xl p-6 ${
-                plan.highlight
-                  ? "bg-ink text-white shadow-xl ring-1 ring-brand/40"
-                  : "bg-white shadow-sm ring-1 ring-black/5"
-              }`}
-            >
-              {plan.highlight && (
-                <span className="mb-3 inline-block w-fit rounded-full bg-brand px-3 py-1 text-xs font-semibold text-white">
-                  Most Popular
-                </span>
-              )}
-              <h3 className={`text-lg font-bold ${plan.highlight ? "text-white" : "text-ink"}`}>
-                {plan.name}
-              </h3>
-              <p className={`mt-1 text-sm ${plan.highlight ? "text-gray-400" : "text-gray-500"}`}>
-                {plan.frequency}
-              </p>
-              <p className={`mt-4 text-4xl font-extrabold ${plan.highlight ? "text-white" : "text-ink"}`}>
-                ${plan.price}
-                <span className={`text-base font-medium ${plan.highlight ? "text-gray-400" : "text-gray-500"}`}>
-                  /mo
-                </span>
-              </p>
-              <ul className={`mt-6 flex-1 space-y-3 text-sm ${plan.highlight ? "text-gray-300" : "text-gray-600"}`}>
-                {plan.features.map((f) => (
-                  <li key={f} className="flex gap-2">
-                    <span className="text-brand">✓</span> {f}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/contact"
-                className={`mt-6 block rounded-full px-5 py-2.5 text-center text-sm font-semibold transition ${
+          {pricingPlans.map((plan) => {
+            const primary = plan.prices[0];
+            const rest = plan.prices.slice(1);
+            return (
+              <div
+                key={plan.name}
+                className={`card-lift flex flex-col rounded-3xl p-6 ${
                   plan.highlight
-                    ? "bg-brand text-white hover:bg-brand-light"
-                    : "bg-ink text-white hover:bg-brand"
+                    ? "bg-ink text-white shadow-xl ring-1 ring-brand/40"
+                    : "bg-white shadow-sm ring-1 ring-black/5"
                 }`}
               >
-                Enroll Now
-              </Link>
-            </div>
-          ))}
+                {plan.highlight && (
+                  <span className="mb-3 inline-block w-fit rounded-full bg-brand px-3 py-1 text-xs font-semibold text-white">
+                    Most Popular
+                  </span>
+                )}
+                <h3 className={`text-lg font-bold ${plan.highlight ? "text-white" : "text-ink"}`}>
+                  {plan.name}
+                </h3>
+                <p className={`mt-1 text-sm ${plan.highlight ? "text-gray-400" : "text-gray-500"}`}>
+                  {plan.recommendedFor}
+                </p>
+
+                <p className={`mt-4 text-4xl font-extrabold ${plan.highlight ? "text-white" : "text-ink"}`}>
+                  {primary.symbol}
+                  {primary.amount}
+                  <span className={`text-base font-medium ${plan.highlight ? "text-gray-400" : "text-gray-500"}`}>
+                    {" "}
+                    {primary.currency}/mo
+                  </span>
+                </p>
+
+                <ul className={`mt-3 space-y-1 text-xs ${plan.highlight ? "text-gray-400" : "text-gray-500"}`}>
+                  {rest.map((p) => (
+                    <li key={p.currency} className="flex justify-between">
+                      <span>{p.currency}</span>
+                      <span>
+                        {p.symbol}
+                        {p.amount}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <ul className={`mt-6 flex-1 space-y-3 border-t pt-5 text-sm ${plan.highlight ? "border-white/10 text-gray-300" : "border-black/5 text-gray-600"}`}>
+                  <li className="flex items-center gap-2">
+                    <CheckIcon className="h-4 w-4 shrink-0 text-brand" /> {plan.classesPerMonth}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckIcon className="h-4 w-4 shrink-0 text-brand" /> {plan.classesPerWeek}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckIcon className="h-4 w-4 shrink-0 text-brand" /> {plan.duration}
+                  </li>
+                </ul>
+
+                <Link
+                  href="/contact"
+                  className={`mt-6 block rounded-full px-5 py-2.5 text-center text-sm font-semibold transition ${
+                    plan.highlight
+                      ? "bg-brand text-white hover:bg-brand-light"
+                      : "bg-ink text-white hover:bg-brand"
+                  }`}
+                >
+                  Contact Us
+                </Link>
+              </div>
+            );
+          })}
         </div>
 
         <div className="container-page mt-14 rounded-3xl bg-white p-8 text-center shadow-sm ring-1 ring-black/5">
           <h3 className="text-xl font-bold text-ink">All Plans Include!</h3>
           <div className="mt-4 flex flex-wrap justify-center gap-6 text-gray-700">
-            <span>✅ Free Trial Class</span>
-            <span>✅ 24/7 Availability</span>
-            <span>✅ Classes via Zoom / Skype</span>
+            <span className="flex items-center gap-2">
+              <CheckIcon className="h-4 w-4 text-brand" /> Free Trial Class
+            </span>
+            <span className="flex items-center gap-2">
+              <CheckIcon className="h-4 w-4 text-brand" /> 24/7 Availability
+            </span>
+            <span className="flex items-center gap-2">
+              <CheckIcon className="h-4 w-4 text-brand" /> Classes via Zoom / Skype
+            </span>
           </div>
         </div>
 

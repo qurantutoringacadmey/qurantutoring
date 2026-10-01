@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { courses, testimonials, whyChooseUs, generalFaqs, site } from "@/lib/data";
+import { SparkleIcon, StarIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Learn Quran Online with Certified Male & Female Tutors",
@@ -41,7 +42,7 @@ export default function Home() {
         <div className="container-page relative grid items-center gap-16 lg:grid-cols-2">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-light">
-              ✨ Free Trial Class for New Students
+              <SparkleIcon className="h-3.5 w-3.5" /> Free Trial Class for New Students
             </span>
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-[3.4rem]">
               Empowering Souls Through{" "}
@@ -207,7 +208,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-gray-300">
               We are the first choice for individuals and families seeking
-              authentic, flexible, and high-quality Quran education online ,
+              authentic, flexible, and high-quality Quran education online,
               and here&rsquo;s why:
             </p>
           </div>
@@ -239,7 +240,11 @@ export default function Home() {
                 key={t.name}
                 className="card-lift rounded-3xl border border-black/5 bg-white p-8 shadow-sm"
               >
-                <div className="mb-3 text-brand">★★★★★</div>
+                <div className="mb-3 flex gap-1 text-brand">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <StarIcon key={i} className="h-4 w-4" />
+                  ))}
+                </div>
                 <h3 className="font-bold text-ink">{t.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-gray-600">
                   &ldquo;{t.quote}&rdquo;

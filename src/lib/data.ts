@@ -371,37 +371,87 @@ export const courses: Course[] = [
   },
 ];
 
-export const pricingPlans = [
+export type PricingPlan = {
+  name: string;
+  recommendedFor: string;
+  classesPerMonth: string;
+  classesPerWeek: string;
+  duration: string;
+  prices: { currency: string; symbol: string; amount: number }[];
+  highlight?: boolean;
+};
+
+export const pricingPlans: PricingPlan[] = [
   {
-    name: "Starter Plan",
-    frequency: "2 Classes / Week",
-    price: 30,
-    features: ["One-on-One Sessions", "Basic Quran Reading", "Flexible Timing"],
+    name: "Plan A",
+    recommendedFor: "Recommended for advanced level learners",
+    classesPerMonth: "08 Classes Per Month",
+    classesPerWeek: "02 Classes Per Week",
+    duration: "30 Minutes Per Class",
+    prices: [
+      { currency: "USD", symbol: "$", amount: 35 },
+      { currency: "GBP", symbol: "£", amount: 25 },
+      { currency: "CAD", symbol: "$", amount: 40 },
+      { currency: "EUR", symbol: "€", amount: 30 },
+      { currency: "AUD", symbol: "$", amount: 50 },
+    ],
   },
   {
-    name: "Medium Plan",
-    frequency: "3 Classes / Week",
-    price: 40,
-    features: ["Tajweed Lessons", "For Kids & Adults", "Male/Female Tutors"],
+    name: "Plan B",
+    recommendedFor: "Recommended for medium level learners",
+    classesPerMonth: "12 Classes Per Month",
+    classesPerWeek: "03 Classes Per Week",
+    duration: "30 Minutes Per Class",
+    prices: [
+      { currency: "USD", symbol: "$", amount: 50 },
+      { currency: "GBP", symbol: "£", amount: 35 },
+      { currency: "CAD", symbol: "$", amount: 60 },
+      { currency: "EUR", symbol: "€", amount: 45 },
+      { currency: "AUD", symbol: "$", amount: 70 },
+    ],
   },
   {
-    name: "Standard Plan",
-    frequency: "4 Days a Week (Mon–Thu)",
-    price: 50,
-    features: ["Nazra & Tajweed", "Monthly Progress Report", "WhatsApp Support"],
+    name: "Plan C",
+    recommendedFor: "Recommended for medium level learners",
+    classesPerMonth: "16 Classes Per Month",
+    classesPerWeek: "04 Classes Per Week",
+    duration: "30 Minutes Per Class",
+    prices: [
+      { currency: "USD", symbol: "$", amount: 65 },
+      { currency: "GBP", symbol: "£", amount: 45 },
+      { currency: "CAD", symbol: "$", amount: 80 },
+      { currency: "EUR", symbol: "€", amount: 60 },
+      { currency: "AUD", symbol: "$", amount: 90 },
+    ],
     highlight: true,
   },
   {
-    name: "Advance Plan",
-    frequency: "5 Days a Week (Mon–Fri)",
-    price: 70,
-    features: ["Hifz + Revision", "Personalized Schedule", "Weekly Testing"],
+    name: "Plan D",
+    recommendedFor: "Recommended for basic level learners",
+    classesPerMonth: "20 Classes Per Month",
+    classesPerWeek: "05 Classes Per Week",
+    duration: "30 Minutes Per Class",
+    prices: [
+      { currency: "USD", symbol: "$", amount: 80 },
+      { currency: "GBP", symbol: "£", amount: 55 },
+      { currency: "CAD", symbol: "$", amount: 100 },
+      { currency: "EUR", symbol: "€", amount: 70 },
+      { currency: "AUD", symbol: "$", amount: 110 },
+    ],
   },
   {
-    name: "Family Plan",
-    frequency: "Up to 3 Students",
-    price: 120,
-    features: ["Mix of Courses", "Separate Timings", "Group Discount"],
+    name: "Hifz Plan",
+    recommendedFor: "Recommended for Quran Memorization",
+    classesPerMonth: "20 Classes Per Month",
+    classesPerWeek: "05 Classes Per Week",
+    duration: "01 Hour Per Class",
+    prices: [
+      { currency: "USD", symbol: "$", amount: 160 },
+      { currency: "GBP", symbol: "£", amount: 110 },
+      { currency: "CAD", symbol: "$", amount: 200 },
+      { currency: "EUR", symbol: "€", amount: 140 },
+      { currency: "AUD", symbol: "$", amount: 220 },
+    ],
   },
 ];
 

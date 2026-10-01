@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { site, courses } from "@/lib/data";
+import { WhatsAppIcon, PhoneIcon, MailIcon } from "@/components/icons";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -41,20 +42,20 @@ export default function Header() {
               href={`https://wa.me/${site.whatsapp}`}
               className="flex items-center gap-1.5 text-gray-300 transition hover:text-brand-light"
             >
-              <span aria-hidden>💬</span> {site.phone}
+              <WhatsAppIcon className="h-3.5 w-3.5" /> {site.phone}
             </a>
             <a
               href={`tel:${site.phoneAlt.replace(/[^\d+]/g, "")}`}
               className="flex items-center gap-1.5 text-gray-300 transition hover:text-brand-light"
             >
-              <span aria-hidden>📞</span> {site.phoneAlt}
+              <PhoneIcon className="h-3.5 w-3.5" /> {site.phoneAlt}
             </a>
           </div>
           <a
             href={`mailto:${site.email}`}
             className="flex items-center gap-1.5 text-gray-300 transition hover:text-brand-light"
           >
-            <span aria-hidden>✉️</span> {site.email}
+            <MailIcon className="h-3.5 w-3.5" /> {site.email}
           </a>
         </div>
       </div>

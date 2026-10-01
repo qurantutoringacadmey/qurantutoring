@@ -34,55 +34,45 @@ export default function AboutPage() {
       </section>
 
       <section className="section">
-        <div className="container-page grid items-center gap-14 lg:grid-cols-2">
-          <div className="relative mx-auto aspect-square w-72 overflow-hidden rounded-[2rem] shadow-2xl ring-4 ring-cream sm:w-96">
-            <Image
-              src="/images/founder.jpg"
-              alt="Hafiz Qari Muhammad Shoukat, founder of Quran Tutoring"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <span className="text-sm font-bold uppercase tracking-widest text-brand">
-              Meet the Founder
-            </span>
-            <h2 className="mt-3 text-3xl font-extrabold text-ink">
-              Hafiz Qari Muhammad Shoukat
-            </h2>
-            <p className="mt-1 font-semibold text-brand">
-              Founder of Quran Tutoring
-            </p>
-            <p className="mt-5 leading-relaxed text-gray-600">
-              At Quran Tutoring, we take pride in offering authentic and
-              structured Quranic education under the guidance of our founder,
-              Hafiz Qari Muhammad Shoukat. With over{" "}
-              <strong>15 years</strong> of teaching experience, he has
-              dedicated his life to spreading the knowledge of the Holy Quran
-              and Islamic teachings.
-            </p>
-            <p className="mt-4 leading-relaxed text-gray-600">
-              He holds qualifications in{" "}
-              <strong>
-                Hifz-e-Quran, Tajweed-e-Quran, Dars-e-Nizami, Arabic Language,
-                and a PhD in Islamic Studies
-              </strong>
-              , making him a highly qualified and experienced instructor.
-            </p>
+        <div className="container-page mx-auto max-w-3xl text-center">
+          <span className="text-sm font-bold uppercase tracking-widest text-brand">
+            Meet the Founder
+          </span>
+          <h2 className="mt-3 text-3xl font-extrabold text-ink">
+            Hafiz Qari Muhammad Shoukat
+          </h2>
+          <p className="mt-1 font-semibold text-brand">
+            Founder of Quran Tutoring
+          </p>
+          <p className="mt-5 leading-relaxed text-gray-600">
+            At Quran Tutoring, we take pride in offering authentic and
+            structured Quranic education under the guidance of our founder,
+            Hafiz Qari Muhammad Shoukat. With over{" "}
+            <strong>15 years</strong> of teaching experience, he has
+            dedicated his life to spreading the knowledge of the Holy Quran
+            and Islamic teachings.
+          </p>
+          <p className="mt-4 leading-relaxed text-gray-600">
+            He holds qualifications in{" "}
+            <strong>
+              Hifz-e-Quran, Tajweed-e-Quran, Dars-e-Nizami, Arabic Language,
+              and a PhD in Islamic Studies
+            </strong>
+            , making him a highly qualified and experienced instructor.
+          </p>
 
-            <div className="mt-8 flex gap-10 border-t border-black/5 pt-8">
-              <div>
-                <p className="text-3xl font-extrabold text-brand">15+</p>
-                <p className="text-sm text-gray-500">Years of Experience</p>
-              </div>
-              <div>
-                <p className="text-3xl font-extrabold text-brand">6</p>
-                <p className="text-sm text-gray-500">Courses Offered</p>
-              </div>
-              <div>
-                <p className="text-3xl font-extrabold text-brand">24/7</p>
-                <p className="text-sm text-gray-500">Availability</p>
-              </div>
+          <div className="mt-10 flex justify-center gap-10 border-t border-black/5 pt-8">
+            <div>
+              <p className="text-3xl font-extrabold text-brand">15+</p>
+              <p className="text-sm text-gray-500">Years of Experience</p>
+            </div>
+            <div>
+              <p className="text-3xl font-extrabold text-brand">6</p>
+              <p className="text-sm text-gray-500">Courses Offered</p>
+            </div>
+            <div>
+              <p className="text-3xl font-extrabold text-brand">24/7</p>
+              <p className="text-sm text-gray-500">Availability</p>
             </div>
           </div>
         </div>
