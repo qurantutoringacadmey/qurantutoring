@@ -149,8 +149,8 @@ export default function Home() {
           <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:ml-auto lg:mr-0">
             <div className="float relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-black/40 ring-1 ring-white/10">
               <Image
-                src="/images/hero-online-class.jpg"
-                alt="Student attending an online Quran class"
+                src="/images/hero-image.jpg"
+                alt="Child listening to Quran recitation while reading along"
                 fill
                 priority
                 sizes="(max-width: 640px) 320px, 384px"
@@ -299,12 +299,20 @@ export default function Home() {
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
                       {course.summary}
                     </p>
-                    <Link
-                      href={`/courses/${course.slug}`}
-                      className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand transition hover:gap-2.5 hover:text-brand-dark"
-                    >
-                      Read More <span aria-hidden>→</span>
-                    </Link>
+                    <div className="mt-4 flex items-center gap-4">
+                      <Link
+                        href="/contact"
+                        className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark"
+                      >
+                        Book Trial
+                      </Link>
+                      <Link
+                        href={`/courses/${course.slug}`}
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition hover:gap-2.5 hover:text-brand-dark"
+                      >
+                        Read More <span aria-hidden>→</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </Reveal>

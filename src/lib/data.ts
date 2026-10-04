@@ -370,6 +370,166 @@ export const courses: Course[] = [
       },
     ],
   },
+  {
+    slug: "tafseer-ul-quran",
+    title: "Tafseer-ul-Quran Course",
+    shortTitle: "Tafseer-ul-Quran",
+    subtitle: "Understand the Deeper Meaning Behind Every Verse",
+    image: "/images/course-tafseer.jpg",
+    summary:
+      "Go beyond translation and explore the context, wisdom, and scholarly explanation behind the Quran's verses with guided Tafseer lessons.",
+    who: [
+      "Students who have completed Quran reading and want to understand its meaning",
+      "Adults seeking a deeper spiritual and intellectual connection with the Quran",
+      "Anyone who has completed our Arabic Language or Translation course",
+      "Students preparing to teach or lead discussions on Quranic topics",
+    ],
+    learn: [
+      "Context and reasons behind the revelation (Asbab al-Nuzul) of key verses",
+      "Classical Tafseer references explained in simple language",
+      "Thematic study of major Surahs and their core messages",
+      "Linking Quranic guidance to everyday life and modern situations",
+      "Connections between verses, Hadith, and Islamic jurisprudence",
+      "Building the skills to study Tafseer independently",
+    ],
+    features: [
+      "One-on-one live classes with scholars trained in Tafseer",
+      "Explanations drawn from authentic, recognized Tafseer sources",
+      "Flexible pacing, Surah-by-Surah or topic-by-topic",
+      "Suitable for both Arabic speakers and non-Arabic speakers",
+      "24/7 student support and flexible scheduling",
+    ],
+    outcome:
+      "By the end of this course, you will understand the deeper meaning and context of the verses you recite, and be able to connect Quranic guidance to real life with confidence.",
+    faqs: [
+      {
+        q: "Do I need to know Arabic to join this course?",
+        a: "No, all explanations are given in English (or Urdu on request), though a basic grasp of Arabic helps you follow along with the original text.",
+      },
+      {
+        q: "Is this different from the Arabic Language course?",
+        a: "Yes. The Arabic Language course teaches you to read and understand Arabic itself, while Tafseer focuses on the meaning, context, and scholarly explanation of specific verses.",
+      },
+      {
+        q: "Can beginners join this course?",
+        a: "We recommend first completing Basic Qaida and some Quran reading practice, so you're comfortable following along with the verses being discussed.",
+      },
+      {
+        q: "Which Tafseer sources do you use?",
+        a: "Our tutors draw from recognized, authentic classical and contemporary Tafseer works, explained in accessible language.",
+      },
+      {
+        q: "How is this course structured?",
+        a: "You can choose to study specific Surahs in depth or follow a structured thematic path through the Quran, based on your goals.",
+      },
+    ],
+  },
+  {
+    slug: "six-kalimas",
+    title: "Six Kalimas Course",
+    shortTitle: "Six Kalimas",
+    subtitle: "Learn and Understand the Six Declarations of Faith",
+    image: "/images/course-kalimas.jpg",
+    summary:
+      "Memorize the Six Kalimas with correct pronunciation and learn the meaning behind each declaration of faith, ideal for kids and new Muslims.",
+    who: [
+      "Children learning the foundations of their faith",
+      "New Muslims wanting to learn the core declarations of Islam",
+      "Adults who want to refresh their memorization and understanding",
+      "Parents looking for a structured way to teach their kids at home",
+    ],
+    learn: [
+      "Correct memorization of all Six Kalimas with proper pronunciation",
+      "Word-by-word meaning and translation of each Kalima",
+      "The significance and occasion of use for each declaration",
+      "Simple Arabic vocabulary found within the Kalimas",
+      "Connecting the Kalimas to daily practice and belief",
+    ],
+    features: [
+      "One-on-one live classes with certified tutors",
+      "Fun, repetition-based memorization techniques for children",
+      "Clear meaning and translation alongside memorization",
+      "Flexible timings for families worldwide",
+      "24/7 student support",
+    ],
+    outcome:
+      "By the end of this course, you will confidently recite all Six Kalimas from memory with correct pronunciation, and understand the meaning behind each one.",
+    faqs: [
+      {
+        q: "What are the Six Kalimas?",
+        a: "The Six Kalimas are six foundational Arabic declarations covering faith, purity, and core Islamic beliefs, traditionally among the first things taught to Muslim children.",
+      },
+      {
+        q: "Is this course suitable for very young children?",
+        a: "Yes, we use simple repetition and engaging methods suitable for young learners, typically from age 4 and up.",
+      },
+      {
+        q: "Will my child understand the meaning, or just memorize the words?",
+        a: "Both. Alongside memorization, we explain the meaning of each Kalima in simple terms appropriate for the student's age.",
+      },
+      {
+        q: "How long does it take to learn all Six Kalimas?",
+        a: "Most students memorize all six within 4 to 8 weeks with consistent practice, though pace varies by age and frequency of classes.",
+      },
+      {
+        q: "Can adults join this course too?",
+        a: "Absolutely. Many adults, especially new Muslims, join to learn or refresh their memorization and understanding of the Kalimas.",
+      },
+    ],
+  },
+  {
+    slug: "hadith-studies",
+    title: "Hadith Studies Course",
+    shortTitle: "Hadith Studies",
+    subtitle: "Learn the Authentic Sayings and Practices of the Prophet ﷺ",
+    image: "/images/course-hadith.jpg",
+    summary:
+      "Study selected authentic Hadith from trusted collections, understand their meaning and application, and learn how to live by the Prophet's ﷺ guidance.",
+    who: [
+      "Students wanting to learn directly from the Prophet's ﷺ teachings",
+      "Adults seeking practical guidance for daily life and worship",
+      "Parents wanting to teach their children good character through Hadith",
+      "Anyone who has completed our Islamic Studies or Seerah course",
+    ],
+    learn: [
+      "Selected authentic Hadith from Sahih Bukhari, Sahih Muslim, and other trusted collections",
+      "Basic understanding of Hadith terminology and authenticity grading",
+      "The context and application of each Hadith in daily life",
+      "Hadith related to worship, character, manners, and family life",
+      "How Hadith complements and explains the Quran",
+    ],
+    features: [
+      "One-on-one live classes with knowledgeable tutors",
+      "Hadith sourced only from authentic, verified collections",
+      "Practical, life-application focus, not just memorization",
+      "Suitable for kids, adults, and new Muslims",
+      "24/7 student support and flexible scheduling",
+    ],
+    outcome:
+      "By the end of this course, you will have studied a meaningful collection of authentic Hadith, understand their context, and know how to apply the Prophet's ﷺ guidance in everyday life.",
+    faqs: [
+      {
+        q: "Which Hadith collections do you teach from?",
+        a: "We teach from authentic, widely recognized collections such as Sahih Bukhari and Sahih Muslim, along with other trusted sources.",
+      },
+      {
+        q: "Do I need prior Islamic knowledge to join?",
+        a: "No, this course is designed for all levels, including complete beginners.",
+      },
+      {
+        q: "Is this course only memorization, or do you explain the Hadith too?",
+        a: "We focus on understanding and application, not rote memorization alone. Each Hadith is explained with its context and relevance to daily life.",
+      },
+      {
+        q: "Can children join this course?",
+        a: "Yes, we select age-appropriate Hadith and explain them in a simple, engaging way for younger students.",
+      },
+      {
+        q: "How does this course relate to the Islamic Studies course?",
+        a: "Islamic Studies covers the broader foundations of Islam, while this course focuses specifically and in depth on studying Hadith.",
+      },
+    ],
+  },
 ];
 
 export type PricingPlan = {

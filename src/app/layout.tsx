@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: "/images/hero-online-class.jpg",
+        url: "/images/hero-image.jpg",
         width: 1200,
         height: 800,
         alt: "Student attending an online Quran class with Quran Tutoring",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quran Tutoring – Learn Quran Online with Certified Tutors",
     description: site.description,
-    images: ["/images/hero-online-class.jpg"],
+    images: ["/images/hero-image.jpg"],
   },
   robots: {
     index: true,
@@ -96,7 +96,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     alternateName: site.name,
     url: site.url,
     logo: `${site.url}/images/logo.png`,
-    image: `${site.url}/images/hero-online-class.jpg`,
+    image: `${site.url}/images/hero-image.jpg`,
     description: site.description,
     email: site.email,
     telephone: site.phone,

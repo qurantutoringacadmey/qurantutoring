@@ -106,6 +106,12 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
           </span>
           <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">{course.title}</h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-200">{course.subtitle}</p>
+          <Link
+            href="/contact"
+            className="mt-7 inline-block rounded-full bg-brand px-8 py-3.5 font-semibold text-white shadow-lg shadow-brand/30 transition hover:-translate-y-0.5 hover:bg-brand-light"
+          >
+            Book a Free Trial Class
+          </Link>
         </div>
         <WaveDivider fill="#fdf6ee" />
       </section>
@@ -205,6 +211,26 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
               </ul>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section relative overflow-hidden bg-gradient-to-br from-brand to-brand-dark text-white">
+        <div className="blob -right-20 -top-20 h-72 w-72 bg-white/30" />
+        <div className="container-page relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
+          <div>
+            <h2 className="text-2xl font-bold sm:text-3xl">
+              Ready to enroll in {course.shortTitle}?
+            </h2>
+            <p className="mt-2 text-white/90">
+              Start with a free trial class, no commitment required.
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
+          >
+            Book Your Free Trial
+          </Link>
         </div>
       </section>
     </>

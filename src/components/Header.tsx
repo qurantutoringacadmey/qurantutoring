@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { site, courses } from "@/lib/data";
-import { WhatsAppIcon, PhoneIcon, MailIcon } from "@/components/icons";
+import { WhatsAppIcon, PhoneIcon, MailIcon, ChevronDownIcon } from "@/components/icons";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -81,7 +81,10 @@ export default function Header() {
                   href={link.href}
                   className="flex items-center gap-1 rounded-full px-4 py-2 transition hover:bg-black/[0.04] hover:text-brand"
                 >
-                  {link.label} <span aria-hidden className="text-[10px]">▾</span>
+                  {link.label}
+                  <ChevronDownIcon
+                    className={`h-3.5 w-3.5 transition-transform duration-200 ${coursesOpen ? "rotate-180" : ""}`}
+                  />
                 </Link>
                 {coursesOpen && (
                   <div className="absolute left-0 top-full w-72 overflow-hidden rounded-2xl border border-black/5 bg-white py-2 shadow-2xl shadow-black/10">
