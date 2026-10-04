@@ -126,7 +126,7 @@ export default function AboutPage() {
             Start learning with a tutor who has taught for 15+ years
           </h2>
           <Link
-            href="/contact"
+            href="/book-trial"
             className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
           >
             Start Your Free Trial

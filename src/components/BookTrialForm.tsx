@@ -5,20 +5,14 @@ import { site } from "@/lib/data";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-const inquiryTypes = [
-  "General Inquiry",
-  "Course Information",
-  "Pricing & Plans",
-  "Technical Support",
-  "Other",
-];
-
-export default function ContactForm() {
+export default function BookTrialForm() {
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    inquiryType: inquiryTypes[0],
+    course: "",
+    studentAge: "",
+    preferredTime: "",
     message: "",
   });
   const [status, setStatus] = useState<Status>("idle");
@@ -33,7 +27,9 @@ export default function ContactForm() {
       `Name: ${form.name}\n` +
       `Email: ${form.email}\n` +
       `Phone: ${form.phone}\n` +
-      `Enquiry Type: ${form.inquiryType}\n\n` +
+      `Student Age: ${form.studentAge || "Not specified"}\n` +
+      `Course of Interest: ${form.course || "Not specified"}\n` +
+      `Preferred Time: ${form.preferredTime || "Not specified"}\n\n` +
       `${form.message}`
     );
   }
@@ -53,7 +49,7 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, formType: "contact" }),
+        body: JSON.stringify({ ...form, formType: "trial" }),
       });
 
       const data = await res.json();
@@ -67,7 +63,9 @@ export default function ContactForm() {
         name: "",
         email: "",
         phone: "",
-        inquiryType: inquiryTypes[0],
+        course: "",
+        studentAge: "",
+        preferredTime: "",
         message: "",
       });
     } catch (err) {
@@ -80,28 +78,6 @@ export default function ContactForm() {
 
   return (
     <form className="space-y-5" onSubmit={handleSubmit}>
-      <div>
-        <label className="mb-2 block text-sm font-semibold text-ink">
-          What can we help you with?
-        </label>
-        <div className="flex flex-wrap gap-2">
-          {inquiryTypes.map((type) => (
-            <button
-              key={type}
-              type="button"
-              onClick={() => update("inquiryType", type)}
-              className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                form.inquiryType === type
-                  ? "bg-brand text-white shadow-sm"
-                  : "bg-cream/70 text-ink/70 hover:bg-cream"
-              }`}
-            >
-              {type}
-            </button>
-          ))}
-        </div>
-      </div>
-
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label className="mb-1 block text-sm font-semibold text-ink">
@@ -131,35 +107,86 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div>
-        <label className="mb-1 block text-sm font-semibold text-ink">
-          Phone / WhatsApp (optional)
-        </label>
-        <input
-          value={form.phone}
-          onChange={(e) => update("phone", e.target.value)}
-          type="tel"
-          placeholder="+1 234 567 8900"
-          className="w-full rounded-xl border border-black/10 bg-cream/40 px-4 py-3 transition focus:border-brand focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand/10"
-        />
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label className="mb-1 block text-sm font-semibold text-ink">
+            Phone / WhatsApp
+          </label>
+          <input
+            value={form.phone}
+            onChange={(e) => update("phone", e.target.value)}
+            type="tel"
+            placeholder="+1 234 567 8900"
+            className="w-full rounded-xl border border-black/10 bg-cream/40 px-4 py-3 transition focus:border-brand focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand/10"
+          />
+        </div>
+        <div>
+          <label className="mb-1 block text-sm font-semibold text-ink">
+            Student Age
+          </label>
+          <input
+            value={form.studentAge}
+            onChange={(e) => update("studentAge", e.target.value)}
+            type="text"
+            placeholder="e.g. 8 years old / Adult"
+            className="w-full rounded-xl border border-black/10 bg-cream/40 px-4 py-3 transition focus:border-brand focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand/10"
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label className="mb-1 block text-sm font-semibold text-ink">
+            Course of Interest
+          </label>
+          <select
+            value={form.course}
+            onChange={(e) => update("course", e.target.value)}
+            className="w-full rounded-xl border border-black/10 bg-cream/40 px-4 py-3 transition focus:border-brand focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand/10"
+          >
+            <option value="">Select a course</option>
+            <option>Basic Qaida</option>
+            <option>Quran Reading with Tajweed</option>
+            <option>Quran Memorization</option>
+            <option>Arabic Language</option>
+            <option>Islamic Studies</option>
+            <option>Seerah of the Prophet Muhammad (PBUH)</option>
+            <option>Tafseer-ul-Quran</option>
+            <option>Six Kalimas</option>
+            <option>Hadith Studies</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div>
+          <label className="mb-1 block text-sm font-semibold text-ink">
+            Preferred Time / Time Zone
+          </label>
+          <input
+            value={form.preferredTime}
+            onChange={(e) => update("preferredTime", e.target.value)}
+            type="text"
+            placeholder="e.g. Evenings, EST"
+            className="w-full rounded-xl border border-black/10 bg-cream/40 px-4 py-3 transition focus:border-brand focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand/10"
+          />
+        </div>
       </div>
 
       <div>
         <label className="mb-1 block text-sm font-semibold text-ink">
-          Message
+          Anything else we should know?
         </label>
         <textarea
           value={form.message}
           onChange={(e) => update("message", e.target.value)}
           rows={4}
-          placeholder="How can we help?"
+          placeholder="Tell us about your goals, current level, or any questions..."
           className="w-full rounded-xl border border-black/10 bg-cream/40 px-4 py-3 transition focus:border-brand focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand/10"
         />
       </div>
 
       {status === "success" && (
         <div className="rounded-xl bg-green-50 px-4 py-3 text-sm font-medium text-green-700">
-          Thank you! Your message has been sent. We&rsquo;ll get back to you within 24 hours.
+          Thank you! Your free trial request has been sent. We&rsquo;ll contact you within 24 hours to schedule your class.
         </div>
       )}
       {status === "error" && (
@@ -174,7 +201,7 @@ export default function ContactForm() {
           disabled={status === "loading"}
           className="rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {status === "loading" ? "Sending..." : "Send Message"}
+          {status === "loading" ? "Sending..." : "Book My Free Trial"}
         </button>
         <button
           type="button"

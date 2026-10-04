@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { site } from "@/lib/data";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
 
 export const metadata: Metadata = {
-  title: "Contact Us – Book a Free Trial Quran Class",
+  title: "Contact Us – Questions About Quran Tutoring",
   description:
-    "Get in touch with Quran Tutoring for course enquiries or to book a free trial Quran class, available 24/7 via WhatsApp, phone, or email.",
+    "Have a question about our courses, pricing, or how online Quran classes work? Get in touch with our team, available 24/7 via WhatsApp, phone, or email.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Quran Tutoring – Book Your Free Trial Class",
+    title: "Contact Quran Tutoring",
     description:
-      "Reach our support team 24/7 via WhatsApp, phone, or email to start your Quran learning journey.",
+      "Reach our support team 24/7 via WhatsApp, phone, or email with any questions.",
     url: `${site.url}/contact`,
   },
 };
@@ -29,9 +30,14 @@ export default function ContactPage() {
           </span>
           <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">Contact Us</h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-300">
-            We would love to hear from you! Whether you&rsquo;re looking to enroll
-            in one of our Quran courses, book a free trial class, or simply ask a
-            question, we&rsquo;re here to help you every step of the way.
+            Have a question about our courses, pricing, or how online classes
+            work? Send us a message and we&rsquo;ll get back to you shortly.
+          </p>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-gray-400">
+            Looking to enroll instead?{" "}
+            <Link href="/book-trial" className="font-semibold text-brand-light hover:underline">
+              Book your free trial class here.
+            </Link>
           </p>
         </div>
         <WaveDivider fill="#fdf6ee" />

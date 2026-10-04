@@ -107,7 +107,7 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
           <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">{course.title}</h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-200">{course.subtitle}</p>
           <Link
-            href="/contact"
+            href="/book-trial"
             className="mt-7 inline-block rounded-full bg-brand px-8 py-3.5 font-semibold text-white shadow-lg shadow-brand/30 transition hover:-translate-y-0.5 hover:bg-brand-light"
           >
             Book a Free Trial Class
@@ -189,7 +189,7 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
                 Book a free trial class with our certified tutors today.
               </p>
               <Link
-                href="/contact"
+                href="/book-trial"
                 className="mt-4 block rounded-full bg-brand px-6 py-3 text-center font-semibold text-white transition hover:bg-brand-dark"
               >
                 Enroll Now In {course.shortTitle}
@@ -226,7 +226,7 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
             </p>
           </div>
           <Link
-            href="/contact"
+            href="/book-trial"
             className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
           >
             Book Your Free Trial

@@ -5,6 +5,8 @@ export function buildContactEmailHtml({
   course,
   message,
   siteUrl,
+  heading = "New enquiry from the website contact form",
+  extraFields = [],
 }: {
   name: string;
   email: string;
@@ -12,6 +14,8 @@ export function buildContactEmailHtml({
   course: string;
   message: string;
   siteUrl: string;
+  heading?: string;
+  extraFields?: { label: string; value: string }[];
 }) {
   const row = (label: string, value: string) => `
     <tr>
@@ -54,7 +58,7 @@ export function buildContactEmailHtml({
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                   <tr>
                     <td style="display:inline-block;background-color:#fdf1e6;color:#c25c00;font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;padding:6px 14px;border-radius:999px;">
-                      New Website Enquiry
+                      ${heading}
                     </td>
                   </tr>
                 </table>
@@ -74,6 +78,7 @@ export function buildContactEmailHtml({
                   ${row("Email", `<a href="mailto:${email}" style="color:#e8730a;text-decoration:none;">${email}</a>`)}
                   ${row("Phone", phone)}
                   ${row("Course Interest", course)}
+                  ${extraFields.map((f) => row(f.label, f.value)).join("")}
                 </table>
               </td>
             </tr>

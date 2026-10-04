@@ -103,14 +103,14 @@ export default function PricingPage() {
                   </ul>
 
                   <Link
-                    href="/contact"
+                    href="/book-trial"
                     className={`mt-6 block rounded-full px-5 py-2.5 text-center text-sm font-semibold transition ${
                       plan.highlight
                         ? "bg-brand text-white hover:bg-brand-light"
                         : "bg-ink text-white hover:bg-brand"
                     }`}
                   >
-                    Contact Us
+                    Book Trial
                   </Link>
                 </div>
               </Reveal>
@@ -188,7 +188,7 @@ export default function PricingPage() {
             </h2>
           </div>
           <Link
-            href="/contact"
+            href="/book-trial"
             className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
           >
             Start Your Free Trial Today!

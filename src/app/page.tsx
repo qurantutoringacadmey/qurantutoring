@@ -113,7 +113,7 @@ export default function Home() {
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
-                href="/contact"
+                href="/book-trial"
                 className="rounded-full bg-brand px-8 py-3.5 font-semibold text-white shadow-lg shadow-brand/30 transition hover:-translate-y-0.5 hover:bg-brand-light"
               >
                 Enroll Now
@@ -301,7 +301,7 @@ export default function Home() {
                     </p>
                     <div className="mt-4 flex items-center gap-4">
                       <Link
-                        href="/contact"
+                        href="/book-trial"
                         className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark"
                       >
                         Book Trial
@@ -478,7 +478,7 @@ export default function Home() {
             </p>
           </div>
           <Link
-            href="/contact"
+            href="/book-trial"
             className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
           >
             Start Your Free Trial Today!

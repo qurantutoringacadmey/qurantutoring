@@ -18,6 +18,7 @@ const navLinks = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -114,10 +115,10 @@ export default function Header() {
 
         <div className="hidden lg:block">
           <Link
-            href="/contact"
-            className="rounded-full bg-ink px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-brand"
+            href="/book-trial"
+            className="cta-shiny rounded-full px-6 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5"
           >
-            Enroll Now
+            Book Free Trial
           </Link>
         </div>
 
@@ -133,22 +134,60 @@ export default function Header() {
       {open && (
         <nav className="lg:hidden border-t border-black/5 bg-white">
           <div className="container-page flex flex-col py-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="py-2.5 font-medium text-ink hover:text-brand"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.label === "Courses" ? (
+                <div key={link.href} className="border-b border-black/5 last:border-b-0">
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="flex-1 py-2.5 font-medium text-ink hover:text-brand"
+                    >
+                      {link.label}
+                    </Link>
+                    <button
+                      type="button"
+                      aria-label="Toggle courses submenu"
+                      onClick={() => setMobileCoursesOpen((v) => !v)}
+                      className="p-2.5 text-ink/60"
+                    >
+                      <ChevronDownIcon
+                        className={`h-4 w-4 transition-transform duration-200 ${mobileCoursesOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
+                  </div>
+                  {mobileCoursesOpen && (
+                    <div className="flex flex-col pb-2 pl-4">
+                      {courses.map((c) => (
+                        <Link
+                          key={c.slug}
+                          href={`/courses/${c.slug}`}
+                          onClick={() => setOpen(false)}
+                          className="py-2 text-sm text-ink/70 hover:text-brand"
+                        >
+                          {c.shortTitle}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="py-2.5 font-medium text-ink hover:text-brand"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <Link
-              href="/contact"
+              href="/book-trial"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-ink px-6 py-3 text-center font-semibold text-white"
+              className="cta-shiny mt-2 rounded-full px-6 py-3 text-center font-semibold text-white"
             >
-              Enroll Now
+              Book Free Trial
             </Link>
           </div>
         </nav>

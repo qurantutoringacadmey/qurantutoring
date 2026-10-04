@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
                 Book a free trial class and see the difference for yourself.
               </p>
               <Link
-                href="/contact"
+                href="/book-trial"
                 className="mt-5 inline-block rounded-full bg-brand px-7 py-3 font-semibold text-white transition hover:bg-brand-light"
               >
                 Book Your Free Trial
