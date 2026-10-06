@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { courses, testimonials, whyChooseUs, generalFaqs, site } from "@/lib/data";
 import { blogPosts } from "@/lib/blog";
-import { SparkleIcon, StarIcon, ShieldIcon, ClockIcon, GlobeIcon, BookIcon } from "@/components/icons";
+import { StarIcon, ShieldIcon, ClockIcon, GlobeIcon, BookIcon } from "@/components/icons";
 import Reveal from "@/components/Reveal";
 import Counter from "@/components/Counter";
 import WaveDivider from "@/components/WaveDivider";
@@ -99,10 +99,7 @@ export default function Home() {
 
         <div className="container-page relative grid items-center gap-16 lg:grid-cols-2">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-light">
-              <SparkleIcon className="h-3.5 w-3.5" /> Free 3-Day Trial for New Students
-            </span>
-            <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-[3.4rem]">
+            <h1 className="text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-[3.4rem]">
               Empowering Souls Through{" "}
               <span className="gradient-text">Quranic Knowledge</span>
             </h1>
