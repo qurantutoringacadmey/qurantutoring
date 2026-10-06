@@ -108,9 +108,9 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
           <p className="mx-auto mt-4 max-w-2xl text-gray-200">{course.subtitle}</p>
           <Link
             href="/book-trial"
-            className="mt-7 inline-block rounded-full bg-brand px-8 py-3.5 font-semibold text-white shadow-lg shadow-brand/30 transition hover:-translate-y-0.5 hover:bg-brand-light"
+            className="cta-shiny mt-7 inline-block rounded-full px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5"
           >
-            Book a Free Trial Class
+            Book Your Free 3-Day Trial
           </Link>
         </div>
         <WaveDivider fill="#fdf6ee" />
@@ -186,11 +186,11 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
                 Ready to start your Quran journey?
               </h3>
               <p className="mt-2 text-sm text-gray-600">
-                Book a free trial class with our certified tutors today.
+                Book your free 3-day trial with our certified tutors today.
               </p>
               <Link
                 href="/book-trial"
-                className="mt-4 block rounded-full bg-brand px-6 py-3 text-center font-semibold text-white transition hover:bg-brand-dark"
+                className="cta-shiny mt-4 block rounded-full px-6 py-3 text-center font-semibold text-white transition"
               >
                 Enroll Now In {course.shortTitle}
               </Link>
@@ -222,14 +222,14 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
               Ready to enroll in {course.shortTitle}?
             </h2>
             <p className="mt-2 text-white/90">
-              Start with a free trial class, no commitment required.
+              Start with a free 3-day trial, no commitment required.
             </p>
           </div>
           <Link
             href="/book-trial"
-            className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
+            className="cta-shiny-dark whitespace-nowrap rounded-full px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5"
           >
-            Book Your Free Trial
+            Book Your Free 3-Day Trial
           </Link>
         </div>
       </section>

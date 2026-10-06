@@ -130,13 +130,13 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
             <div className="rounded-3xl bg-ink p-8 text-center text-white">
               <h3 className="text-xl font-bold">Ready to start learning with a certified tutor?</h3>
               <p className="mt-2 text-gray-300">
-                Book a free trial class and see the difference for yourself.
+                Book your free 3-day trial and see the difference for yourself.
               </p>
               <Link
                 href="/book-trial"
-                className="mt-5 inline-block rounded-full bg-brand px-7 py-3 font-semibold text-white transition hover:bg-brand-light"
+                className="cta-shiny mt-5 inline-block rounded-full px-7 py-3 font-semibold text-white transition"
               >
-                Book Your Free Trial
+                Book Your Free 3-Day Trial
               </Link>
             </div>
           </article>

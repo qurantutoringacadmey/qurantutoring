@@ -127,9 +127,9 @@ export default function AboutPage() {
           </h2>
           <Link
             href="/book-trial"
-            className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
+            className="cta-shiny-dark whitespace-nowrap rounded-full px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5"
           >
-            Start Your Free Trial
+            Start Your Free 3-Day Trial
           </Link>
         </div>
         <WaveDivider fill="#0f1115" />

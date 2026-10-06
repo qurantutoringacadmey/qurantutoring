@@ -36,7 +36,7 @@ export default function ContactPage() {
           <p className="mx-auto mt-3 max-w-2xl text-sm text-gray-400">
             Looking to enroll instead?{" "}
             <Link href="/book-trial" className="font-semibold text-brand-light hover:underline">
-              Book your free trial class here.
+              Book your free 3-day trial here.
             </Link>
           </p>
         </div>

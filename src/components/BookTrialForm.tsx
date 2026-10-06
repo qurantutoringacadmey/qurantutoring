@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { site } from "@/lib/data";
+import { site, courses } from "@/lib/data";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -145,15 +145,9 @@ export default function BookTrialForm() {
             className="w-full rounded-xl border border-black/10 bg-cream/40 px-4 py-3 transition focus:border-brand focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand/10"
           >
             <option value="">Select a course</option>
-            <option>Basic Qaida</option>
-            <option>Quran Reading with Tajweed</option>
-            <option>Quran Memorization</option>
-            <option>Arabic Language</option>
-            <option>Islamic Studies</option>
-            <option>Seerah of the Prophet Muhammad (PBUH)</option>
-            <option>Tafseer-ul-Quran</option>
-            <option>Six Kalimas</option>
-            <option>Hadith Studies</option>
+            {courses.map((c) => (
+              <option key={c.slug}>{c.shortTitle}</option>
+            ))}
             <option>Not sure yet</option>
           </select>
         </div>
@@ -186,7 +180,7 @@ export default function BookTrialForm() {
 
       {status === "success" && (
         <div className="rounded-xl bg-green-50 px-4 py-3 text-sm font-medium text-green-700">
-          Thank you! Your free trial request has been sent. We&rsquo;ll contact you within 24 hours to schedule your class.
+          Thank you! Your free 3-day trial request has been sent. We&rsquo;ll contact you within 24 hours to schedule your class.
         </div>
       )}
       {status === "error" && (
@@ -199,9 +193,9 @@ export default function BookTrialForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-60"
+          className="cta-shiny rounded-full px-6 py-3 font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {status === "loading" ? "Sending..." : "Book My Free Trial"}
+          {status === "loading" ? "Sending..." : "Book My Free 3-Day Trial"}
         </button>
         <button
           type="button"

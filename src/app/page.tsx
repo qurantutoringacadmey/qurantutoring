@@ -34,8 +34,8 @@ const trustPoints = [
 const howItWorks = [
   {
     step: "01",
-    title: "Book a Free Trial",
-    desc: "Reach out via WhatsApp, phone, or our contact form to schedule your free trial class.",
+    title: "Book a Free 3-Day Trial",
+    desc: "Reach out via WhatsApp, phone, or our contact form to schedule your free 3-day trial.",
   },
   {
     step: "02",
@@ -57,12 +57,12 @@ const howItWorks = [
 export const metadata: Metadata = {
   title: "Learn Quran Online with Certified Male & Female Tutors",
   description:
-    "Join Quran Tutoring for personalized 1-on-1 online Quran classes, Noorani Qaida, Tajweed, Hifz, Arabic, and Islamic Studies for kids, adults, and beginners. Free trial class available, 24/7.",
+    "Join Quran Tutoring for personalized 1-on-1 online Quran classes, Noorani Qaida, Tajweed, Hifz, Arabic, and Islamic Studies for kids, adults, and beginners. Free 3-day trial available, 24/7.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Learn Quran Online with Certified Male & Female Tutors",
     description:
-      "Personalized 1-on-1 online Quran classes for kids, adults, and beginners worldwide. Free trial class, flexible scheduling, certified tutors.",
+      "Personalized 1-on-1 online Quran classes for kids, adults, and beginners worldwide. Free 3-day trial, flexible scheduling, certified tutors.",
     url: site.url,
   },
 };
@@ -100,7 +100,7 @@ export default function Home() {
         <div className="container-page relative grid items-center gap-16 lg:grid-cols-2">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-light">
-              <SparkleIcon className="h-3.5 w-3.5" /> Free Trial Class for New Students
+              <SparkleIcon className="h-3.5 w-3.5" /> Free 3-Day Trial for New Students
             </span>
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] sm:text-5xl lg:text-[3.4rem]">
               Empowering Souls Through{" "}
@@ -109,14 +109,14 @@ export default function Home() {
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-gray-300">
               We warmly welcome students of all ages to join our online Quran
               classes with qualified male and female tutors, flexible timings,
-              a free trial, and expert guidance every step of the way.
+              a free 3-day trial, and expert guidance every step of the way.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
                 href="/book-trial"
-                className="rounded-full bg-brand px-8 py-3.5 font-semibold text-white shadow-lg shadow-brand/30 transition hover:-translate-y-0.5 hover:bg-brand-light"
+                className="cta-shiny rounded-full px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5"
               >
-                Enroll Now
+                Book Free 3-Day Trial
               </Link>
               <Link
                 href="/courses"
@@ -302,7 +302,7 @@ export default function Home() {
                     <div className="mt-4 flex items-center gap-4">
                       <Link
                         href="/book-trial"
-                        className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark"
+                        className="cta-shiny rounded-full px-4 py-2 text-sm font-semibold text-white transition"
                       >
                         Book Trial
                       </Link>
@@ -474,14 +474,14 @@ export default function Home() {
               Ready to begin your Quran journey?
             </h2>
             <p className="mt-2 text-white/90">
-              Start with a free trial class, no commitment required.
+              Start with a free 3-day trial, no commitment required.
             </p>
           </div>
           <Link
             href="/book-trial"
-            className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
+            className="cta-shiny-dark whitespace-nowrap rounded-full px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5"
           >
-            Start Your Free Trial Today!
+            Start Your Free 3-Day Trial Today!
           </Link>
         </div>
         <WaveDivider fill="#0f1115" />

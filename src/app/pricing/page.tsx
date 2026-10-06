@@ -9,12 +9,12 @@ import WaveDivider from "@/components/WaveDivider";
 export const metadata: Metadata = {
   title: "Quran Class Pricing – Affordable Online Quran Course Plans",
   description:
-    "Affordable monthly Quran class plans for kids and adults, starting at $35/month, plus a dedicated Hifz (memorization) plan, all including a free trial class.",
+    "Affordable monthly Quran class plans for kids and adults, starting at $35/month, plus a dedicated Hifz (memorization) plan, all including a free 3-day trial.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Quran Class Pricing – Affordable Online Quran Course Plans",
     description:
-      "Simple, affordable monthly plans for every student, with a free trial class before you commit.",
+      "Simple, affordable monthly plans for every student, with a free 3-day trial before you commit.",
     url: `${site.url}/pricing`,
   },
 };
@@ -36,8 +36,8 @@ export default function PricingPage() {
           </span>
           <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">Pricing Plans</h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-300">
-            Simple, affordable monthly plans for every student, with a free trial
-            class before you commit.
+            Simple, affordable monthly plans for every student, with a free
+            3-day trial before you commit.
           </p>
         </div>
         <WaveDivider fill="#fdf6ee" />
@@ -104,11 +104,7 @@ export default function PricingPage() {
 
                   <Link
                     href="/book-trial"
-                    className={`mt-6 block rounded-full px-5 py-2.5 text-center text-sm font-semibold transition ${
-                      plan.highlight
-                        ? "bg-brand text-white hover:bg-brand-light"
-                        : "bg-ink text-white hover:bg-brand"
-                    }`}
+                    className={`cta-shiny mt-6 block rounded-full px-5 py-2.5 text-center text-sm font-semibold text-white transition`}
                   >
                     Book Trial
                   </Link>
@@ -122,7 +118,7 @@ export default function PricingPage() {
           <h3 className="text-xl font-bold text-ink">All Plans Include!</h3>
           <div className="mt-4 flex flex-wrap justify-center gap-6 text-gray-700">
             <span className="flex items-center gap-2">
-              <CheckIcon className="h-4 w-4 text-brand" /> Free Trial Class
+              <CheckIcon className="h-4 w-4 text-brand" /> Free 3-Day Trial
             </span>
             <span className="flex items-center gap-2">
               <CheckIcon className="h-4 w-4 text-brand" /> 24/7 Availability
@@ -168,7 +164,7 @@ export default function PricingPage() {
               <div>
                 <h2 className="text-xl font-bold text-ink">Our No-Risk Guarantee</h2>
                 <p className="mt-2 text-gray-600">
-                  Every plan starts with a free trial class, no credit card, no
+                  Every plan starts with a free 3-day trial, no credit card, no
                   commitment. If you&rsquo;re not happy with your tutor, we&rsquo;ll
                   match you with another one at no extra cost. You only pay once
                   you&rsquo;re confident Quran Tutoring is the right fit for your family.
@@ -189,9 +185,9 @@ export default function PricingPage() {
           </div>
           <Link
             href="/book-trial"
-            className="whitespace-nowrap rounded-full bg-ink px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
+            className="cta-shiny-dark whitespace-nowrap rounded-full px-8 py-3.5 font-semibold text-white transition hover:-translate-y-0.5"
           >
-            Start Your Free Trial Today!
+            Start Your Free 3-Day Trial Today!
           </Link>
         </div>
         <WaveDivider fill="#0f1115" />

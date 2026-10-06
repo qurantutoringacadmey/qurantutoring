@@ -6,14 +6,14 @@ import WaveDivider from "@/components/WaveDivider";
 import { ShieldIcon, ClockIcon, CheckIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Book a Free Trial Class – No Commitment Required",
+  title: "Book a Free 3-Day Trial – No Commitment Required",
   description:
-    "Book your free trial Quran class with a certified male or female tutor. No credit card, no commitment, just tell us your goals and we'll match you with the right tutor.",
+    "Book your free 3-day trial with a certified male or female tutor. No credit card, no commitment, just tell us your goals and we'll match you with the right tutor.",
   alternates: { canonical: "/book-trial" },
   openGraph: {
-    title: "Book a Free Trial Class – Quran Tutoring",
+    title: "Book a Free 3-Day Trial – Quran Tutoring",
     description:
-      "No credit card, no commitment. Book your free trial Quran class today.",
+      "No credit card, no commitment. Book your free 3-day trial today.",
     url: `${site.url}/book-trial`,
   },
 };
@@ -22,12 +22,12 @@ const trialPerks = [
   {
     icon: ShieldIcon,
     title: "No Commitment",
-    desc: "Your trial class is completely free, with no card required and no obligation to continue.",
+    desc: "Your 3-day trial is completely free, with no card required and no obligation to continue.",
   },
   {
     icon: ClockIcon,
     title: "We Reply Fast",
-    desc: "Our team usually confirms your trial class within a few hours.",
+    desc: "Our team usually confirms your trial within a few hours.",
   },
   {
     icon: CheckIcon,
@@ -44,14 +44,14 @@ export default function BookTrialPage() {
         <div className="blob -left-24 top-0 h-72 w-72 bg-brand" />
         <div className="container-page relative">
           <span className="text-sm font-bold uppercase tracking-widest text-brand-light">
-            Free Trial Class
+            Free 3-Day Trial
           </span>
           <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">
-            Book Your Free Trial Class
+            Book Your Free 3-Day Trial
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-300">
             Tell us a little about yourself or your child, and we&rsquo;ll match
-            you with the right tutor for a free, no-commitment trial class.
+            you with the right tutor for a free, no-commitment 3-day trial.
           </p>
         </div>
         <WaveDivider fill="#fdf6ee" />
@@ -64,7 +64,7 @@ export default function BookTrialPage() {
               <h2 className="text-2xl font-bold text-ink">Tell Us About Your Goals</h2>
               <p className="mt-2 text-sm text-gray-600">
                 Fill in the details below and our team will reach out to confirm
-                your free trial class, usually within 24 hours.
+                your free 3-day trial, usually within 24 hours.
               </p>
               <div className="mt-6">
                 <BookTrialForm />

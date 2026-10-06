@@ -118,7 +118,7 @@ export default function Header() {
             href="/book-trial"
             className="cta-shiny rounded-full px-6 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5"
           >
-            Book Free Trial
+            Book Free 3-Day Trial
           </Link>
         </div>
 
@@ -187,7 +187,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="cta-shiny mt-2 rounded-full px-6 py-3 text-center font-semibold text-white"
             >
-              Book Free Trial
+              Book Free 3-Day Trial
             </Link>
           </div>
         </nav>
