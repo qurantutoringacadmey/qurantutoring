@@ -7,14 +7,14 @@ import Counter from "@/components/Counter";
 import WaveDivider from "@/components/WaveDivider";
 
 export const metadata: Metadata = {
-  title: "About Us – Meet Our Founder & Quran Teaching Philosophy",
+  title: "About Us – Our Story Since 2011 & Our Founder",
   description:
-    "Meet Hafiz Qari Muhammad Shoukat, founder of Quran Tutoring, with over 15 years of experience teaching Quran, Tajweed, Hifz, and Islamic Studies online to students worldwide.",
+    "Quran Tutoring began in 2011 as a small local Quran class run by Hafiz Qari Muhammad Shoukat. Fifteen years on, it's an online academy teaching students worldwide.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Quran Tutoring – Our Founder & Mission",
+    title: "About Quran Tutoring – Our Story Since 2011",
     description:
-      "15+ years of authentic, structured Quran education, now available online for students of all ages.",
+      "From a small local Quran class in 2011 to an online academy teaching students around the world, this is our story.",
     url: `${site.url}/about`,
   },
 };
@@ -29,16 +29,61 @@ export default function AboutPage() {
           <span className="text-sm font-bold uppercase tracking-widest text-brand-light">
             Our Story
           </span>
-          <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">About Us</h1>
+          <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">
+            Teaching the Quran Since 2011
+          </h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-300">
-            Authentic and structured Quranic education, built on years of
-            dedicated teaching experience.
+            What started as a few local Quran lessons has grown into an
+            online academy trusted by families around the world.
           </p>
         </div>
         <WaveDivider fill="#fffdfb" />
       </section>
 
+      {/* Our Story narrative */}
       <section className="section">
+        <div className="container-page grid items-center gap-14 lg:grid-cols-2">
+          <Reveal>
+            <span className="text-sm font-bold uppercase tracking-widest text-brand">
+              How We Started
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-ink sm:text-4xl">
+              A Small Quran Class That Grew Into a Global Academy
+            </h2>
+            <p className="mt-5 leading-relaxed text-gray-600">
+              Quran Tutoring didn&rsquo;t begin as a company. In 2011, Hafiz
+              Qari Muhammad Shoukat started teaching Quran to children in his
+              own neighborhood, one student at a time, on a mat in his
+              living room. Word spread. Parents who saw how patiently he
+              worked with their children began referring their friends and
+              relatives, and within a few years what had been a handful of
+              local students had grown into something much bigger than one
+              teacher could manage alone.
+            </p>
+            <p className="mt-4 leading-relaxed text-gray-600">
+              As more families, including many living abroad, began asking
+              if their children could join the same classes over video call,
+              the academy naturally moved online. Today, the same approach
+              that worked in that first living room, patient, one-on-one
+              attention from a tutor who genuinely cares about your
+              child&rsquo;s progress, is what we still build every class
+              around, now for students across the USA, UK, Canada, and
+              beyond.
+            </p>
+          </Reveal>
+          <Reveal delay={100} className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.75rem] shadow-xl">
+            <Image
+              src="/images/boy-reading-quran-mosque.jpg"
+              alt="Student reading the Quran with a tutor"
+              fill
+              className="object-cover"
+            />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section className="section bg-cream">
         <Reveal className="container-page mx-auto max-w-3xl text-center">
           <span className="text-sm font-bold uppercase tracking-widest text-brand">
             Meet the Founder
@@ -47,35 +92,39 @@ export default function AboutPage() {
             Hafiz Qari Muhammad Shoukat
           </h2>
           <p className="mt-1 font-semibold text-brand">
-            Founder of Quran Tutoring
+            Founder &amp; Lead Tutor, Quran Tutoring
           </p>
           <p className="mt-5 leading-relaxed text-gray-600">
-            At Quran Tutoring, we take pride in offering authentic and
-            structured Quranic education under the guidance of our founder,
-            Hafiz Qari Muhammad Shoukat. With over{" "}
-            <strong>15 years</strong> of teaching experience, he has
-            dedicated his life to spreading the knowledge of the Holy Quran
-            and Islamic teachings.
+            Qari Shoukat holds qualifications in Hifz-e-Quran,
+            Tajweed-e-Quran, Dars-e-Nizami, and Arabic Language, along with a
+            PhD in Islamic Studies. But parents who&rsquo;ve enrolled their
+            children with him over the years usually mention something else
+            first: his patience. He still personally trains every tutor who
+            joins the academy, so the same standard of care he brought to
+            that first living room class in 2011 carries through to every
+            lesson today.
           </p>
           <p className="mt-4 leading-relaxed text-gray-600">
-            He holds qualifications in{" "}
-            <strong>
-              Hifz-e-Quran, Tajweed-e-Quran, Dars-e-Nizami, Arabic Language,
-              and a PhD in Islamic Studies
-            </strong>
-            , making him a highly qualified and experienced instructor.
+            &ldquo;I don&rsquo;t think of myself as running an academy,&rdquo;
+            he says. &ldquo;I think of it as a group of teachers who care
+            about your child the way I cared about my first students, back
+            when it was just me and a Qaida book.&rdquo;
           </p>
 
-          <div className="mt-10 flex justify-center gap-10 border-t border-black/5 pt-8">
+          <div className="mt-10 flex flex-wrap justify-center gap-10 border-t border-black/5 pt-8">
+            <div>
+              <p className="text-3xl font-extrabold text-brand">2011</p>
+              <p className="text-sm text-gray-500">Academy Founded</p>
+            </div>
             <div>
               <p className="text-3xl font-extrabold text-brand">
                 <Counter to={15} suffix="+" />
               </p>
-              <p className="text-sm text-gray-500">Years of Experience</p>
+              <p className="text-sm text-gray-500">Years Teaching</p>
             </div>
             <div>
               <p className="text-3xl font-extrabold text-brand">
-                <Counter to={6} />
+                <Counter to={9} />
               </p>
               <p className="text-sm text-gray-500">Courses Offered</p>
             </div>
@@ -99,9 +148,9 @@ export default function AboutPage() {
             <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
               <h3 className="text-xl font-bold text-brand-light">Our Mission</h3>
               <p className="mt-3 text-gray-300">
-                To provide quality Quran education online with proper Tajweed,
-                inspiring students to understand, recite, and live by the
-                teachings of the Quran.
+                To teach the Quran the way it was taught to us, patiently,
+                properly, and with real care for each student, no matter
+                where in the world they&rsquo;re logging in from.
               </p>
             </div>
           </Reveal>
@@ -109,9 +158,9 @@ export default function AboutPage() {
             <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
               <h3 className="text-xl font-bold text-brand-light">Our Vision</h3>
               <p className="mt-3 text-gray-300">
-                To become a trusted global Quran tutoring platform where
-                students of all ages can learn the Quran easily, respectfully,
-                and meaningfully, from the comfort of their homes.
+                To remain the kind of academy families refer to their
+                friends and relatives, the same way ours grew, one
+                recommendation at a time, for many more years to come.
               </p>
             </div>
           </Reveal>
@@ -123,7 +172,7 @@ export default function AboutPage() {
         <div className="blob -right-20 -top-20 h-72 w-72 bg-white/30" />
         <div className="container-page relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
           <h2 className="text-2xl font-bold sm:text-3xl">
-            Start learning with a tutor who has taught for 15+ years
+            Join the academy families have trusted since 2011
           </h2>
           <Link
             href="/book-trial"
