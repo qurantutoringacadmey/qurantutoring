@@ -200,9 +200,176 @@ export const courses: Course[] = [
     ],
   },
   {
+    slug: "six-kalimas",
+    title: "Six Kalimas & Nimaz Course",
+    shortTitle: "Six Kalimas & Nimaz",
+    subtitle: "Learn the Six Declarations of Faith and How to Pray Nimaz Correctly",
+    image: "/images/course-kalimas.jpg",
+    summary:
+      "Memorize the Six Kalimas with correct pronunciation and learn how to perform Nimaz (Salah) step by step, ideal for kids and new Muslims.",
+    who: [
+      "Children learning the foundations of their faith and daily prayer",
+      "New Muslims wanting to learn the core declarations of Islam and how to pray",
+      "Adults who want to refresh their memorization and correct their Nimaz",
+      "Parents looking for a structured way to teach their kids at home",
+    ],
+    learn: [
+      "Correct memorization of all Six Kalimas with proper pronunciation",
+      "Word-by-word meaning and translation of each Kalima",
+      "The significance and occasion of use for each declaration",
+      "How to perform Nimaz (Salah) correctly, step by step, from Wudu to Salaam",
+      "Surahs and duas required for Nimaz, with correct pronunciation",
+      "Simple Arabic vocabulary found within the Kalimas and prayer",
+      "Connecting the Kalimas and Nimaz to daily practice and belief",
+    ],
+    features: [
+      "One-on-one live classes with certified tutors",
+      "Fun, repetition-based memorization techniques for children",
+      "Step-by-step Nimaz practice with live correction",
+      "Clear meaning and translation alongside memorization",
+      "Flexible timings for families worldwide",
+      "24/7 student support",
+    ],
+    outcome:
+      "By the end of this course, you will confidently recite all Six Kalimas from memory with correct pronunciation, and be able to perform Nimaz correctly and confidently on your own.",
+    faqs: [
+      {
+        q: "What are the Six Kalimas?",
+        a: "The Six Kalimas are six foundational Arabic declarations covering faith, purity, and core Islamic beliefs, traditionally among the first things taught to Muslim children.",
+      },
+      {
+        q: "Does this course also teach how to pray Nimaz?",
+        a: "Yes. Alongside the Six Kalimas, students are taught how to perform Nimaz (Salah) correctly, step by step, including Wudu, the required Surahs and duas, and the correct movements.",
+      },
+      {
+        q: "Is this course suitable for very young children?",
+        a: "Yes, we use simple repetition and engaging methods suitable for young learners, typically from age 4 and up.",
+      },
+      {
+        q: "Will my child understand the meaning, or just memorize the words?",
+        a: "Both. Alongside memorization, we explain the meaning of each Kalima and the purpose of each part of Nimaz in simple, age-appropriate terms.",
+      },
+      {
+        q: "How long does it take to complete this course?",
+        a: "Most students memorize all six Kalimas and learn to perform Nimaz confidently within 2 to 3 months with consistent practice, though pace varies by age and frequency of classes.",
+      },
+      {
+        q: "Can adults join this course too?",
+        a: "Absolutely. Many adults, especially new Muslims, join to learn or correct their Kalimas and Nimaz.",
+      },
+    ],
+  },
+  {
+    slug: "masnoon-dua",
+    title: "Masnoon Dua Course",
+    shortTitle: "Masnoon Dua",
+    subtitle: "Learn the Prophetic Duas for Everyday Life",
+    image: "/images/course-kalimas.jpg",
+    summary:
+      "Learn the authentic, Prophetic (Masnoon) duas for everyday situations, from waking up to sleeping, eating, travel, and more, with correct pronunciation and meaning.",
+    who: [
+      "Children and adults who want to learn duas for daily situations",
+      "New Muslims wanting to add authentic Sunnah duas to their routine",
+      "Parents looking to teach their children Masnoon duas from an early age",
+      "Anyone who wants to replace casual habits with Prophetic practice",
+    ],
+    learn: [
+      "Duas for waking up, sleeping, and daily routines",
+      "Duas for eating, drinking, and entering/leaving the home",
+      "Duas for travel, difficulty, and seeking protection",
+      "Correct pronunciation with proper Tajweed",
+      "Word-by-word meaning and translation of each dua",
+      "The Sunnah occasions and etiquette for each dua",
+    ],
+    features: [
+      "One-on-one live classes with certified tutors",
+      "Simple memorization techniques for kids and adults",
+      "Clear meaning and translation alongside memorization",
+      "Flexible timings for families worldwide",
+      "24/7 student support",
+    ],
+    outcome:
+      "By the end of this course, you will confidently recite the essential Masnoon duas from memory, understand their meaning, and apply them naturally in your daily life.",
+    faqs: [
+      {
+        q: "What is a Masnoon Dua?",
+        a: "A Masnoon Dua is a supplication that the Prophet Muhammad ﷺ himself recited and taught for specific daily situations, such as waking up, eating, or travelling.",
+      },
+      {
+        q: "Is this course suitable for young children?",
+        a: "Yes, we use simple repetition and engaging methods suitable for young learners.",
+      },
+      {
+        q: "Will I understand the meaning, or just memorize the words?",
+        a: "Both. Alongside memorization, we explain the meaning and occasion of use for each dua in simple, age-appropriate terms.",
+      },
+      {
+        q: "How long does this course take?",
+        a: "Most students learn the core set of daily duas within 1 to 2 months with consistent practice.",
+      },
+      {
+        q: "Can adults join this course too?",
+        a: "Absolutely. Many adults join to learn or refresh their Masnoon duas alongside their children.",
+      },
+    ],
+  },
+  {
+    slug: "hadith-studies",
+    title: "Hadith Studies Course",
+    shortTitle: "Hadith Studies",
+    subtitle: "Learn the Authentic Sayings and Practices of the Prophet ﷺ",
+    image: "/images/course-hadith.jpg",
+    summary:
+      "Study selected authentic Hadith from trusted collections, understand their meaning and application, and learn how to live by the Prophet's ﷺ guidance.",
+    who: [
+      "Students wanting to learn directly from the Prophet's ﷺ teachings",
+      "Adults seeking practical guidance for daily life and worship",
+      "Parents wanting to teach their children good character through Hadith",
+      "Anyone who has completed our Islamic Studies or Seerah course",
+    ],
+    learn: [
+      "Selected authentic Hadith from Sahih Bukhari, Sahih Muslim, and other trusted collections",
+      "Basic understanding of Hadith terminology and authenticity grading",
+      "The context and application of each Hadith in daily life",
+      "Hadith related to worship, character, manners, and family life",
+      "How Hadith complements and explains the Quran",
+    ],
+    features: [
+      "One-on-one live classes with knowledgeable tutors",
+      "Hadith sourced only from authentic, verified collections",
+      "Practical, life-application focus, not just memorization",
+      "Suitable for kids, adults, and new Muslims",
+      "24/7 student support and flexible scheduling",
+    ],
+    outcome:
+      "By the end of this course, you will have studied a meaningful collection of authentic Hadith, understand their context, and know how to apply the Prophet's ﷺ guidance in everyday life.",
+    faqs: [
+      {
+        q: "Which Hadith collections do you teach from?",
+        a: "We teach from authentic, widely recognized collections such as Sahih Bukhari and Sahih Muslim, along with other trusted sources.",
+      },
+      {
+        q: "Do I need prior Islamic knowledge to join?",
+        a: "No, this course is designed for all levels, including complete beginners.",
+      },
+      {
+        q: "Is this course only memorization, or do you explain the Hadith too?",
+        a: "We focus on understanding and application, not rote memorization alone. Each Hadith is explained with its context and relevance to daily life.",
+      },
+      {
+        q: "Can children join this course?",
+        a: "Yes, we select age-appropriate Hadith and explain them in a simple, engaging way for younger students.",
+      },
+      {
+        q: "How does this course relate to the Islamic Studies course?",
+        a: "Islamic Studies covers the broader foundations of Islam, while this course focuses specifically and in depth on studying Hadith.",
+      },
+    ],
+  },
+  {
     slug: "tafseer-ul-quran",
-    title: "Tafseer-ul-Quran Course",
-    shortTitle: "Tafseer-ul-Quran",
+    title: "Tarjuma & Tafseer-ul-Quran Course",
+    shortTitle: "Tarjuma & Tafseer ul Quran",
     subtitle: "Understand the Deeper Meaning Behind Every Verse",
     image: "/images/course-tafseer.jpg",
     summary:
@@ -311,55 +478,59 @@ export const courses: Course[] = [
     ],
   },
   {
-    slug: "hadith-studies",
-    title: "Hadith Studies Course",
-    shortTitle: "Hadith Studies",
-    subtitle: "Learn the Authentic Sayings and Practices of the Prophet ﷺ",
-    image: "/images/course-hadith.jpg",
+    slug: "seerah-of-the-prophet-muhammad-pbuh",
+    title: "Seerah of the Prophet Muhammad (PBUH) Course",
+    shortTitle: "Seerah of the Prophet",
+    subtitle: "Discover the Life and Legacy of Prophet Muhammad ﷺ",
+    image: "/images/course-seerah.jpg",
     summary:
-      "Study selected authentic Hadith from trusted collections, understand their meaning and application, and learn how to live by the Prophet's ﷺ guidance.",
+      "Discover the life, character, and teachings of Prophet Muhammad ﷺ in a simplified and inspiring way, perfect for all age groups.",
     who: [
-      "Students wanting to learn directly from the Prophet's ﷺ teachings",
-      "Adults seeking practical guidance for daily life and worship",
-      "Parents wanting to teach their children good character through Hadith",
-      "Anyone who has completed our Islamic Studies or Seerah course",
+      "Muslims wanting to strengthen their love and connection with the Prophet ﷺ",
+      "New Muslims who want to understand the foundations of Islam",
+      "Students of Islamic Studies and history",
+      "Parents who want their children to learn authentic Seerah",
+      "Anyone seeking moral and spiritual guidance through the Prophet's example",
     ],
     learn: [
-      "Selected authentic Hadith from Sahih Bukhari, Sahih Muslim, and other trusted collections",
-      "Basic understanding of Hadith terminology and authenticity grading",
-      "The context and application of each Hadith in daily life",
-      "Hadith related to worship, character, manners, and family life",
-      "How Hadith complements and explains the Quran",
+      "The lineage, birth, and early life of the Prophet ﷺ",
+      "The first revelation and the early days of Islam",
+      "The Prophet's ﷺ migration to Madinah",
+      "Major battles and events during his lifetime",
+      "His personal character, compassion, and leadership",
+      "Lessons from his dealings with family, friends, and even enemies",
+      "The final sermon and passing of the Prophet ﷺ",
     ],
     features: [
-      "One-on-one live classes with knowledgeable tutors",
-      "Hadith sourced only from authentic, verified collections",
-      "Practical, life-application focus, not just memorization",
-      "Suitable for kids, adults, and new Muslims",
-      "24/7 student support and flexible scheduling",
+      "Authentic content from reliable Islamic sources",
+      "Story-based teaching for easy understanding",
+      "Special focus on moral lessons for kids and adults",
+      "One-on-one or group class options available",
+      "Flexible timings for students worldwide",
+      "24/7 student support",
     ],
     outcome:
-      "By the end of this course, you will have studied a meaningful collection of authentic Hadith, understand their context, and know how to apply the Prophet's ﷺ guidance in everyday life.",
+      "By the end of this course, you will gain a deep understanding of the Prophet's ﷺ life and mission, learn practical Sunnah to apply in your daily life, and be able to share Seerah stories with others confidently.",
     faqs: [
       {
-        q: "Which Hadith collections do you teach from?",
-        a: "We teach from authentic, widely recognized collections such as Sahih Bukhari and Sahih Muslim, along with other trusted sources.",
+        q: "Do I need prior Islamic knowledge to join this course?",
+        a: "No, this course is designed for all levels, from beginners to advanced students.",
       },
       {
-        q: "Do I need prior Islamic knowledge to join?",
-        a: "No, this course is designed for all levels, including complete beginners.",
+        q: "Will you provide authentic sources?",
+        a: "Yes, all content is taken from authentic and verified Islamic sources.",
       },
       {
-        q: "Is this course only memorization, or do you explain the Hadith too?",
-        a: "We focus on understanding and application, not rote memorization alone. Each Hadith is explained with its context and relevance to daily life.",
+        q: "Is this course suitable for kids?",
+        a: "Absolutely! We use age-appropriate language and storytelling techniques for children.",
       },
       {
-        q: "Can children join this course?",
-        a: "Yes, we select age-appropriate Hadith and explain them in a simple, engaging way for younger students.",
+        q: "How long does the course take?",
+        a: "It usually takes 1–3 months depending on class frequency and student pace.",
       },
       {
-        q: "How does this course relate to the Islamic Studies course?",
-        a: "Islamic Studies covers the broader foundations of Islam, while this course focuses specifically and in depth on studying Hadith.",
+        q: "Will I get a certificate?",
+        a: "Yes, a certificate of completion will be awarded after finishing the course.",
       },
     ],
   },
@@ -417,123 +588,6 @@ export const courses: Course[] = [
       {
         q: "How long will it take to learn Arabic?",
         a: "Basic fluency can be achieved in 4–6 months depending on your pace and practice.",
-      },
-    ],
-  },
-  {
-    slug: "six-kalimas",
-    title: "Six Kalimas & Nimaz Course",
-    shortTitle: "Six Kalimas & Nimaz",
-    subtitle: "Learn the Six Declarations of Faith and How to Pray Nimaz Correctly",
-    image: "/images/course-kalimas.jpg",
-    summary:
-      "Memorize the Six Kalimas with correct pronunciation and learn how to perform Nimaz (Salah) step by step, ideal for kids and new Muslims.",
-    who: [
-      "Children learning the foundations of their faith and daily prayer",
-      "New Muslims wanting to learn the core declarations of Islam and how to pray",
-      "Adults who want to refresh their memorization and correct their Nimaz",
-      "Parents looking for a structured way to teach their kids at home",
-    ],
-    learn: [
-      "Correct memorization of all Six Kalimas with proper pronunciation",
-      "Word-by-word meaning and translation of each Kalima",
-      "The significance and occasion of use for each declaration",
-      "How to perform Nimaz (Salah) correctly, step by step, from Wudu to Salaam",
-      "Surahs and duas required for Nimaz, with correct pronunciation",
-      "Simple Arabic vocabulary found within the Kalimas and prayer",
-      "Connecting the Kalimas and Nimaz to daily practice and belief",
-    ],
-    features: [
-      "One-on-one live classes with certified tutors",
-      "Fun, repetition-based memorization techniques for children",
-      "Step-by-step Nimaz practice with live correction",
-      "Clear meaning and translation alongside memorization",
-      "Flexible timings for families worldwide",
-      "24/7 student support",
-    ],
-    outcome:
-      "By the end of this course, you will confidently recite all Six Kalimas from memory with correct pronunciation, and be able to perform Nimaz correctly and confidently on your own.",
-    faqs: [
-      {
-        q: "What are the Six Kalimas?",
-        a: "The Six Kalimas are six foundational Arabic declarations covering faith, purity, and core Islamic beliefs, traditionally among the first things taught to Muslim children.",
-      },
-      {
-        q: "Does this course also teach how to pray Nimaz?",
-        a: "Yes. Alongside the Six Kalimas, students are taught how to perform Nimaz (Salah) correctly, step by step, including Wudu, the required Surahs and duas, and the correct movements.",
-      },
-      {
-        q: "Is this course suitable for very young children?",
-        a: "Yes, we use simple repetition and engaging methods suitable for young learners, typically from age 4 and up.",
-      },
-      {
-        q: "Will my child understand the meaning, or just memorize the words?",
-        a: "Both. Alongside memorization, we explain the meaning of each Kalima and the purpose of each part of Nimaz in simple, age-appropriate terms.",
-      },
-      {
-        q: "How long does it take to complete this course?",
-        a: "Most students memorize all six Kalimas and learn to perform Nimaz confidently within 2 to 3 months with consistent practice, though pace varies by age and frequency of classes.",
-      },
-      {
-        q: "Can adults join this course too?",
-        a: "Absolutely. Many adults, especially new Muslims, join to learn or correct their Kalimas and Nimaz.",
-      },
-    ],
-  },
-  {
-    slug: "seerah-of-the-prophet-muhammad-pbuh",
-    title: "Seerah of the Prophet Muhammad (PBUH) Course",
-    shortTitle: "Seerah of the Prophet",
-    subtitle: "Discover the Life and Legacy of Prophet Muhammad ﷺ",
-    image: "/images/course-seerah.jpg",
-    summary:
-      "Discover the life, character, and teachings of Prophet Muhammad ﷺ in a simplified and inspiring way, perfect for all age groups.",
-    who: [
-      "Muslims wanting to strengthen their love and connection with the Prophet ﷺ",
-      "New Muslims who want to understand the foundations of Islam",
-      "Students of Islamic Studies and history",
-      "Parents who want their children to learn authentic Seerah",
-      "Anyone seeking moral and spiritual guidance through the Prophet's example",
-    ],
-    learn: [
-      "The lineage, birth, and early life of the Prophet ﷺ",
-      "The first revelation and the early days of Islam",
-      "The Prophet's ﷺ migration to Madinah",
-      "Major battles and events during his lifetime",
-      "His personal character, compassion, and leadership",
-      "Lessons from his dealings with family, friends, and even enemies",
-      "The final sermon and passing of the Prophet ﷺ",
-    ],
-    features: [
-      "Authentic content from reliable Islamic sources",
-      "Story-based teaching for easy understanding",
-      "Special focus on moral lessons for kids and adults",
-      "One-on-one or group class options available",
-      "Flexible timings for students worldwide",
-      "24/7 student support",
-    ],
-    outcome:
-      "By the end of this course, you will gain a deep understanding of the Prophet's ﷺ life and mission, learn practical Sunnah to apply in your daily life, and be able to share Seerah stories with others confidently.",
-    faqs: [
-      {
-        q: "Do I need prior Islamic knowledge to join this course?",
-        a: "No, this course is designed for all levels, from beginners to advanced students.",
-      },
-      {
-        q: "Will you provide authentic sources?",
-        a: "Yes, all content is taken from authentic and verified Islamic sources.",
-      },
-      {
-        q: "Is this course suitable for kids?",
-        a: "Absolutely! We use age-appropriate language and storytelling techniques for children.",
-      },
-      {
-        q: "How long does the course take?",
-        a: "It usually takes 1–3 months depending on class frequency and student pace.",
-      },
-      {
-        q: "Will I get a certificate?",
-        a: "Yes, a certificate of completion will be awarded after finishing the course.",
       },
     ],
   },
