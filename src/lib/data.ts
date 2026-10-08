@@ -264,7 +264,7 @@ export const courses: Course[] = [
     title: "Masnoon Dua Course",
     shortTitle: "Masnoon Dua",
     subtitle: "Learn the Prophetic Duas for Everyday Life",
-    image: "/images/quran-on-rehal.jpg",
+    image: "/images/masnon-dua.jpg",
     summary:
       "Learn the authentic, Prophetic (Masnoon) duas for everyday situations, from waking up to sleeping, eating, travel, and more, with correct pronunciation and meaning.",
     who: [
