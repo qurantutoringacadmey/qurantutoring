@@ -204,7 +204,7 @@ export const courses: Course[] = [
     title: "Six Kalimas & Nimaz Course",
     shortTitle: "Six Kalimas & Nimaz",
     subtitle: "Learn the Six Declarations of Faith and How to Pray Nimaz Correctly",
-    image: "/images/course-kalimas.jpg",
+    image: "/images/mosque-minaret.jpg",
     summary:
       "Memorize the Six Kalimas with correct pronunciation and learn how to perform Nimaz (Salah) step by step, ideal for kids and new Muslims.",
     who: [
@@ -264,7 +264,7 @@ export const courses: Course[] = [
     title: "Masnoon Dua Course",
     shortTitle: "Masnoon Dua",
     subtitle: "Learn the Prophetic Duas for Everyday Life",
-    image: "/images/course-kalimas.jpg",
+    image: "/images/quran-on-rehal.jpg",
     summary:
       "Learn the authentic, Prophetic (Masnoon) duas for everyday situations, from waking up to sleeping, eating, travel, and more, with correct pronunciation and meaning.",
     who: [

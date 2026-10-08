@@ -131,14 +131,14 @@ export default function Home() {
                 <p className="text-sm text-gray-400">Years Teaching</p>
               </div>
               <div>
-                <p className="text-2xl font-extrabold text-brand-light">
-                  <Counter to={6} />
-                </p>
-                <p className="text-sm text-gray-400">Courses Offered</p>
-              </div>
-              <div>
                 <p className="text-2xl font-extrabold text-brand-light">24/7</p>
                 <p className="text-sm text-gray-400">Availability</p>
+              </div>
+              <div>
+                <p className="text-2xl font-extrabold text-brand-light">
+                  <Counter to={100} suffix="%" />
+                </p>
+                <p className="text-sm text-gray-400">Personalized Attention</p>
               </div>
             </div>
           </div>

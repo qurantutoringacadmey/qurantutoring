@@ -123,14 +123,14 @@ export default function AboutPage() {
               <p className="text-sm text-gray-500">Years Teaching</p>
             </div>
             <div>
-              <p className="text-3xl font-extrabold text-brand">
-                <Counter to={9} />
-              </p>
-              <p className="text-sm text-gray-500">Courses Offered</p>
-            </div>
-            <div>
               <p className="text-3xl font-extrabold text-brand">24/7</p>
               <p className="text-sm text-gray-500">Availability</p>
+            </div>
+            <div>
+              <p className="text-3xl font-extrabold text-brand">
+                <Counter to={100} suffix="%" />
+              </p>
+              <p className="text-sm text-gray-500">Personalized Attention</p>
             </div>
           </div>
         </Reveal>
